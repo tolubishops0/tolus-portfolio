@@ -22,7 +22,7 @@ const Skills: React.FC = () => {
         <h1 className="text:lg sm:text-xl md:text-2xl xl:text-4xl font-black text-center ">
           My Skills
         </h1>
-        <div className="flex flex-wrap items-stretch gap-y-16 gap-x-8 sm:gap-x-14 md:gap-x-6 xl:gap-x-10 justify-between mt-8">
+        <div className="flex flex-wrap items-stretch gap-y-16 gap-x-8 sm:gap-x-14 md:gap-x-6 xl:gap-x-10 justify-between mt-10">
           {skills.map((skill, index) => (
             <Image
               className="w-[25%] sm:w-[25%] md:w-[30%] lg:w-[22%] xl:w-[13%] 2xl:w-[18%] animate-pulse"
