@@ -34,7 +34,7 @@ const SubHero: React.FC = () => {
   };
 
   return (
-    <div className="relative lg:mt-8 flex flex-col-reverse lg:flex-row items-center justify-center lg:gap-x-8 gap-y-4">
+    <div className="relative md:py-6 lg:py-8 flex flex-col-reverse lg:flex-row items-center justify-center lg:gap-x-8 gap-y-4">
       <ThemeSwitch />
       <div className={`w-full lg:w-[60%] flex flex-col gap-y-4 xl:gap-y-6`}>
         <h1 className="text:lg sm:text-xl md:text-2xl xl:text-4xl font-black ">
@@ -43,7 +43,7 @@ const SubHero: React.FC = () => {
         <h1 className="text-sm sm:text-base md:text-2xl xl:text-2xl font-bold italic ">
           Frontend Developer
         </h1>
-        <p className="text-sm sm:text-base md:text-xl xl:text-xl">
+        <p className="text-base md:text-xl xl:text-2xl">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, fuga
           rerum eum laborum corporis dolores quo vitae aspernatur molestias
           tempora fugiat architecto voluptates ducimus assumenda.
