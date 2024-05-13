@@ -4,7 +4,7 @@ import git from "../public/icons8-github-64.png";
 
 import html from "../public/html.png";
 import css from "../public/css.png";
-import js from "../public/js.png";
+import js from "../public/JavaScript.png";
 import ts from "../public/ts.png";
 import scss from "../public/scss.png";
 import gits from "../public/git.png";
@@ -81,8 +81,36 @@ export const skills = [
     icon: ts,
   },
   {
+    label: "react",
+    icon: react,
+  },
+  {
+    label: "mui",
+    icon: mui,
+  },
+  {
+    label: "tailwind",
+    icon: tail,
+  },
+  {
+    label: "next",
+    icon: next,
+  },
+  {
     label: "scss",
     icon: scss,
+  },
+  {
+    label: "git",
+    icon: gits,
+  },
+  {
+    label: "bit",
+    icon: bits,
+  },
+  {
+    label: "github",
+    icon: github,
   },
 ];
 

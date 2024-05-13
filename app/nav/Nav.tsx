@@ -28,7 +28,7 @@ const Nav: React.FC = () => {
     setActiveTab(tab);
   };
   return (
-    <main className="w-[80%] mx-auto h-32 flex justify-between items-center">
+    <main className=" h-32 flex justify-between items-center">
       <div>
         <p className="font-black font-[briem-hand] text-2xl md:text-4xl italic">
           Tolulope

@@ -24,8 +24,8 @@ export default function ThemeSwitch() {
           right: "0",
         }}
         src={resolvedTheme === "dark" ? sun : moon}
-        width={20}
-        height={20}
+        width={24}
+        height={24}
         sizes="36x36"
         alt="Loading Light/Dark Toggle"
         priority={false}

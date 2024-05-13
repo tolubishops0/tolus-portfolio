@@ -3,10 +3,10 @@ import React from "react";
 import { useTheme } from "next-themes";
 import Nav from "../nav/Nav";
 import SubHero from "./SubHero";
+import Skills from "../skills/Skills";
 
 const Hero = () => {
   const { resolvedTheme } = useTheme();
-  console.log(resolvedTheme);
   const textColor = resolvedTheme === "dark" ? "darkTheme" : "lightTheme";
 
   return (
@@ -15,14 +15,19 @@ const Hero = () => {
         resolvedTheme === "dark"
           ? "bg-backgroundImageDark"
           : "bg-backgroundImageLight"
-      }
-      style={{
-        height: "100vh",
-        width: "100%",
-        color: `${textColor}`,
-      }}>
-      <Nav />
-      <SubHero />
+      }>
+      <div
+        style={{
+          height: "100vh",
+          width: "80%",
+          margin: "0 auto",
+          color: `${textColor}`,
+        }}>
+        {" "}
+        <Nav />
+        <SubHero />
+        {/* <Skills /> */}
+      </div>
     </div>
   );
 };

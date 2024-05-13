@@ -9,8 +9,8 @@ const config: Config = {
   theme: {
     extend: {
       backgroundImage: {
-        backgroundImageLight: `linear-gradient(120deg, rgba(208,208,212,1), rgba(82,80,80,0.71)), url('/noise.svg')`,
-        backgroundImageDark: `linear-gradient(280deg, rgba(6,6,6,1), rgba(30,29,29,0.71)), url('/noise.svg')`,
+        backgroundImageLight: `linear-gradient(to top, rgba(208,208,212,1), rgba(82,80,80,0.71)), url('/noise.svg')`,
+        backgroundImageDark: `linear-gradient(to top, rgba(6,6,6,1), rgba(30,29,29,0.71)), url('/noise.svg')`,
       },
       // screens: {
       //   smallmobile: "640px",
