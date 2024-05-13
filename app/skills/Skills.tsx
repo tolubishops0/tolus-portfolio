@@ -25,12 +25,17 @@ const Skills: React.FC = () => {
           margin: "0 auto",
           height: "80vh",
         }}>
-        <h1 className="text:lg sm:text-xl md:text-2xl xl:text-4xl font-black text-center py-6 ">
+        <h1 className="text:lg sm:text-xl md:text-2xl xl:text-4xl font-black text-center pt-3 ">
           My Skills
         </h1>
-        <div className="flex flex-wrap gap-8">
+        <div className="flex flex-wrap gap-8 mt-8">
           {skills.map((skill, index) => (
-            <Image className="w-[25%]" alt="" key={index} src={skill.icon} />
+            <Image
+              className="w-[25%] animate-pulse"
+              alt=""
+              key={index}
+              src={skill.icon}
+            />
           ))}
         </div>
       </div>

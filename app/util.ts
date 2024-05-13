@@ -14,6 +14,7 @@ import tail from "../public/Tailwind CSS.png";
 import next from "../public/Next.js.png";
 import react from "../public/react.png";
 import github from "../public/GitHub.png";
+// import github from "../public/Material UI.png";
 
 type NavContentType = {
   label: string;
