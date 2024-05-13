@@ -1,9 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { navContent } from "../util";
-import Image from "next/image";
-import menu from "../Assest/icons8-menu-30.png";
-import cancel from "../Assest/icons8-cancel-24.png";
+import { useTheme } from "next-themes";
 import { RiMenu3Line } from "react-icons/ri";
 import { RxCross2 } from "react-icons/rx";
 
@@ -13,10 +11,21 @@ type Component = {
 };
 
 const Nav: React.FC = () => {
+  const { resolvedTheme } = useTheme();
   const [showMenu, setShowMenu] = useState<Boolean>(false);
+  const [activeTab, setActiveTab] = useState<String>("");
+  const textColor = resolvedTheme === "dark" ? "darkTheme" : "lightTheme";
 
   const menuButtonToggle = () => {
     setShowMenu(!showMenu);
+  };
+  const handleTabClick = (
+    e: React.MouseEvent<HTMLParagraphElement, MouseEvent>,
+    tab: string
+  ) => {
+    e.preventDefault();
+    setShowMenu(false);
+    setActiveTab(tab);
   };
   return (
     <main className="w-[80%] mx-auto h-32 flex justify-between items-center">
@@ -25,31 +34,29 @@ const Nav: React.FC = () => {
           Tolulope
         </p>
       </div>
-      <div className="lg:hidden " onClick={menuButtonToggle}>
-        {!showMenu ? (
-          <span className="transition ease-in-out delay-150 duration-300">
-            {" "}
-            <RiMenu3Line size={"2em"} />
-          </span>
-        ) : (
-          <span className="transition ease-in-out delay-150 duration-300">
-            {" "}
-            <RxCross2 size={"2em"} />
-          </span>
-        )}
+      <div className="lg:hidden" onClick={menuButtonToggle}>
+        {showMenu ? <RxCross2 size="2em" /> : <RiMenu3Line size="2em" />}
       </div>
       {showMenu && (
-        <div
-          className={`z-10 absolute top-0 left-0 h-full w-1/2 flex flex-col justify-start pt-10 px-8 gap-y-5 transition-transform duration-300 ${
-            showMenu ? "transform translate-x-0" : "transform -translate-x-full"
-          } bg-slate-400`}>
-          {navContent.map((item, index) => (
-            <p
-              className="text-gray py-1 w-full text-base font-semibold cursor-pointer "
-              key={index}>
-              <a>{item.label}</a>
-            </p>
-          ))}
+        <div className={`sidebar ${showMenu ? "open" : ""}`}>
+          <div className="w-3/4 flex flex-col gap-y-6 mt-20">
+            {navContent.map((item, index) => (
+              <p
+                onClick={(e) => handleTabClick(e, item.label)}
+                className=" py-1 w-full text-medium font-semibold cursor-pointer "
+                key={index}>
+                <a
+                  className={`
+                 ${
+                   activeTab === item.label
+                     ? `border-b-2 border-white`
+                     : ""
+                 }`}>
+                  {item.label}
+                </a>
+              </p>
+            ))}
+          </div>
         </div>
       )}
       <div className="hidden lg:flex gap-x-8 items-center justify-center">

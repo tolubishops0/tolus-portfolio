@@ -3,7 +3,7 @@ import React from "react";
 import { useTheme } from "next-themes";
 import { socialIcons } from "../util";
 import Image from "next/image";
-import { BsGithub } from "react-icons/bs";
+import { BsGithub, BsLinkedin, BsTwitterX  } from "react-icons/bs";
 import ThemeSwitch from "./ThemToggle";
 
 const SubHero: React.FC = () => {
@@ -11,11 +11,25 @@ const SubHero: React.FC = () => {
   console.log(resolvedTheme);
   const textColor = resolvedTheme === "dark" ? "darkTheme" : "lightTheme";
 
-  const getSocialLinks = (
-    e: React.MouseEvent<HTMLImageElement>,
-    link: string
-  ) => {
-    e.preventDefault();
+  const socialIcons = [
+    {
+      label: "git",
+      icon: <BsGithub size={"1.5em"} />,
+      link: "https://github.com/tolubishops0",
+    },
+    {
+      label: "x",
+      icon: <BsTwitterX  size={"1.5em"} />,
+      link: "https://twitter.com/tolubishops",
+    },
+    {
+      label: "linkedin",
+      icon: <BsLinkedin size={"1.5em"} />,
+      link: "https://www.linkedin.com/in/tolujoyo/",
+    },
+  ];
+
+  const getSocialLinks = (link: string) => {
     window.open(link, "_blank");
   };
 
@@ -36,15 +50,13 @@ const SubHero: React.FC = () => {
         </p>
         <div className="flex gap-x-4">
           {socialIcons.map((item, index) => (
-            <Image
-              className="w-[1.7rem] cursor-pointer"
+            <span
+              className=" cursor-pointer"
               key={index}
-              src={item.icon}
-              alt={item.label}
-              onClick={(e) => getSocialLinks(e, item.link)}
-            />
+              onClick={(e) => getSocialLinks(item.link)}>
+              {item.icon}
+            </span>
           ))}
-          <BsGithub />
         </div>
       </div>
       <div className="w-full lg:w-[40%]">

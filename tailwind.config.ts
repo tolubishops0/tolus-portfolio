@@ -18,7 +18,7 @@ const config: Config = {
       //   smalltab: "1024px",
       //   desktop: "1280px",
       //   lgdesktop: "1600px",
-      // },
+      // }
       colors: {
         lightTheme: "black",
         darkTheme: "white",
