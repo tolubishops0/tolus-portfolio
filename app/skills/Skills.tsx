@@ -19,19 +19,20 @@ const Skills: React.FC = () => {
         backgroundRepeat: "no-repeat",
       }}>
       <div
+        // className="h-[80vh] md:h-[100vh]"
         style={{
           width: "80%",
           color: `${textColor}`,
           margin: "0 auto",
-          height: "80vh",
+          // height: "80vh",
         }}>
-        <h1 className="text:lg sm:text-xl md:text-2xl xl:text-4xl font-black text-center pt-3 ">
+        <h1 className="text:lg sm:text-xl md:text-2xl xl:text-4xl font-black text-center pt-3 md:pt-8 ">
           My Skills
         </h1>
-        <div className="flex flex-wrap gap-8 mt-8">
+        <div className="flex flex-wrap gap-y-16 gap-x-2 justify-between mt-8">
           {skills.map((skill, index) => (
             <Image
-              className="w-[25%] animate-pulse"
+              className="w-[25%] md:w-[30%] lg:w-[15%] animate-pulse"
               alt=""
               key={index}
               src={skill.icon}
