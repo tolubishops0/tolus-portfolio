@@ -1,10 +1,11 @@
 "use client";
-import React from "react";
+import React, { useRef } from "react";
 import { useTheme } from "next-themes";
 import { socialIcons } from "../util";
 import Image from "next/image";
-import { BsGithub, BsLinkedin, BsTwitterX  } from "react-icons/bs";
+import { BsGithub, BsLinkedin, BsTwitterX } from "react-icons/bs";
 import ThemeSwitch from "./ThemToggle";
+import { useScroll, motion, Variants } from "framer-motion";
 
 const SubHero: React.FC = () => {
   const { resolvedTheme } = useTheme();
@@ -19,7 +20,7 @@ const SubHero: React.FC = () => {
     },
     {
       label: "x",
-      icon: <BsTwitterX  size={"1.5em"} />,
+      icon: <BsTwitterX size={"1.5em"} />,
       link: "https://twitter.com/tolubishops",
     },
     {
@@ -32,11 +33,22 @@ const SubHero: React.FC = () => {
   const getSocialLinks = (link: string) => {
     window.open(link, "_blank");
   };
+  const ref = useRef<HTMLElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["0 1", "1.33 1"],
+  });
 
   return (
-    <div className="relative md:py-6 lg:py-8 flex flex-col-reverse lg:flex-row items-center justify-center lg:gap-x-8 gap-y-4">
+    <motion.div
+      ref={ref}
+      style={{
+        scale: scrollYProgress,
+        opacity: scrollYProgress,
+      }}
+      className="relative md:py-6 lg:py-8 flex flex-col-reverse lg:flex-row items-center justify-center lg:gap-x-8 gap-y-4">
       <ThemeSwitch />
-      <div className={`w-full lg:w-[60%] flex flex-col gap-y-4 xl:gap-y-6`}>
+      <div className={`w-full  flex flex-col gap-y-4 xl:gap-y-6`}>
         <h1 className="text:lg sm:text-xl md:text-2xl xl:text-4xl font-black ">
           Tolulope Okunjoyo
         </h1>
@@ -79,7 +91,7 @@ const SubHero: React.FC = () => {
         --&gt;
       </div>
       ; */}
-    </div>
+    </motion.div>
   );
 };
 

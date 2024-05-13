@@ -2,6 +2,7 @@
 import React from "react";
 import { useTheme } from "next-themes";
 import Image from "next/image";
+import { project } from "../util";
 
 const Projects = () => {
   const { resolvedTheme } = useTheme();
@@ -22,6 +23,19 @@ const Projects = () => {
           <h1 className="text:lg sm:text-xl md:text-2xl xl:text-4xl font-black text-center ">
             My Projects
           </h1>
+          <div className="flex flex-col lg:flex-row items-center gap-x-5 gap-y-3 justify-center w-full mx-auto">
+            {project.map((item, index) => (
+              <div key={index} className="bg-red-500 ">
+                <div className="p-2 mx-auto flex items-center justify-center ">
+                  <Image
+                    alt=""
+                    src={item.img}
+                    style={{ width: "100%", height: "100%" }}
+                  />
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </div>

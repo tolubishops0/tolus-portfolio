@@ -1,13 +1,18 @@
 "use client";
-import React from "react";
+import React, { useRef } from "react";
 import { useTheme } from "next-themes";
 import Image from "next/image";
 import { skills, frameWorks, tools } from "../util";
+import { useScroll, motion, Variants } from "framer-motion";
 
 const Skills: React.FC = () => {
   const { resolvedTheme } = useTheme();
   const textColor = resolvedTheme === "dark" ? "darkTheme" : "lightTheme";
-
+  const ref = useRef<HTMLElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["0 1", "center"],
+  });
   return (
     <div
       style={{
@@ -18,7 +23,10 @@ const Skills: React.FC = () => {
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
       }}>
-      <div className={`w-[80%] mx-auto text-${textColor} py-8`}>
+      <motion.div
+        style={{ scale: scrollYProgress, opacity: scrollYProgress }}
+        ref={ref}
+        className={`w-[80%] mx-auto text-${textColor} py-8`}>
         <h1 className="text:lg sm:text-xl md:text-2xl xl:text-4xl font-black text-center ">
           My Skills
         </h1>
@@ -32,7 +40,7 @@ const Skills: React.FC = () => {
             />
           ))}
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };

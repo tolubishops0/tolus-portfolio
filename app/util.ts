@@ -16,6 +16,12 @@ import react from "../public/react.png";
 import github from "../public/GitHub.png";
 // import github from "../public/Material UI.png";
 
+import spacex from "../public/spacex.png";
+import anike from "../public/anike.png";
+import mhubs from "../public/mhub.png";
+import scissor from "../public/scis.png";
+import spotify from "../public/spotufy.png";
+
 type NavContentType = {
   label: string;
   link: string;
@@ -146,5 +152,36 @@ export const tools = [
   {
     label: "github",
     icon: github,
+  },
+];
+
+export const project = [
+  {
+    img: anike,
+    label: "anikesalubata",
+    text: "lorem ipsum dolor sit amet, consectetur adip lorem ipsum dolor sit amet, consectetur adip lorem ipsum dolor sit amet, consectetur adip",
+    github: "https://github.com/tolubishops0/anikesalubata",
+    link: "https://harmonious-kheer-4c1df8.netlify.app/",
+  },
+  {
+    img: spotify,
+    label: "spotify",
+    text: "lorem ipsum dolor sit amet, consectetur adip lorem ipsum dolor sit amet, consectetur adip lorem ipsum dolor sit amet, consectetur adip",
+    github: "https://github.com/tolubishops0/mock-spotify",
+    link: "https://sunny-spotify.netlify.app/",
+  },
+  {
+    img: mhubs,
+    label: "Movie Hubbs",
+    text: "lorem ipsum dolor sit amet, consectetur adip lorem ipsum dolor sit amet, consectetur adip lorem ipsum dolor sit amet, consectetur adip",
+    github: "https://github.com/tolubishops0/moviebase",
+    link: "https://whimsical-baklava-230b00.netlify.app/",
+  },
+  {
+    img: scissor,
+    label: "scissors",
+    text: "lorem ipsum dolor sit amet, consectetur adip lorem ipsum dolor sit amet, consectetur adip lorem ipsum dolor sit amet, consectetur adip",
+    github: "https://github.com/tolubishops0/scissors",
+    link: "https://moviehubb-will.netlify.app/",
   },
 ];
