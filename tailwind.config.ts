@@ -1,5 +1,4 @@
 import type { Config } from "tailwindcss";
-import { useTheme } from "next-themes";
 
 const config: Config = {
   content: [
@@ -10,9 +9,8 @@ const config: Config = {
   theme: {
     extend: {
       backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        backgroundImageLight: `linear-gradient(120deg, rgba(208,208,212,1), rgba(82,80,80,0.71)), url('/noise.svg')`,
+        backgroundImageDark: `linear-gradient(280deg, rgba(6,6,6,1), rgba(30,29,29,0.71)), url('/noise.svg')`,
       },
       // screens: {
       //   smallmobile: "640px",
@@ -22,12 +20,10 @@ const config: Config = {
       //   lgdesktop: "1600px",
       // },
       colors: {
-        gray: "white",
-        black: "black",
+        lightTheme: "black",
+        darkTheme: "white",
       },
-      fontFamily: {
-
-      },
+      fontFamily: {},
     },
   },
   plugins: [],

@@ -1,11 +1,16 @@
 "use client";
 import React from "react";
+import { useTheme } from "next-themes";
 import { socialIcons } from "../util";
 import Image from "next/image";
-import arrdown from "../../public/icons8-scroll-down-50.png";
+import { BsGithub } from "react-icons/bs";
 import ThemeSwitch from "./ThemToggle";
 
 const SubHero: React.FC = () => {
+  const { resolvedTheme } = useTheme();
+  console.log(resolvedTheme);
+  const textColor = resolvedTheme === "dark" ? "darkTheme" : "lightTheme";
+
   const getSocialLinks = (
     e: React.MouseEvent<HTMLImageElement>,
     link: string
@@ -17,7 +22,7 @@ const SubHero: React.FC = () => {
   return (
     <div className="relative lg:mt-8 w-[80%] flex flex-col-reverse lg:flex-row items-center justify-center lg:gap-x-8 mx-auto gap-y-4">
       <ThemeSwitch />
-      <div className="text-gray w-full lg:w-[60%] flex flex-col gap-y-4 xl:gap-y-6">
+      <div className={`w-full lg:w-[60%] flex flex-col gap-y-4 xl:gap-y-6`}>
         <h1 className="text:lg sm:text-xl md:text-2xl xl:text-4xl font-black ">
           Tolulope Okunjoyo
         </h1>
@@ -39,6 +44,7 @@ const SubHero: React.FC = () => {
               onClick={(e) => getSocialLinks(e, item.link)}
             />
           ))}
+          <BsGithub />
         </div>
       </div>
       <div className="w-full lg:w-[40%]">
@@ -48,6 +54,7 @@ const SubHero: React.FC = () => {
           alt=""
         />
       </div>
+
       <div className="animate-bounce w-10 absolute bottom-0 hidden lg:block">
         <img
           style={{ width: "100%", height: "100%" }}
@@ -55,6 +62,7 @@ const SubHero: React.FC = () => {
           alt=""
         />
       </div>
+
       {/* <div className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
         --&gt;
       </div>

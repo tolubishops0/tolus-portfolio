@@ -4,6 +4,8 @@ import { navContent } from "../util";
 import Image from "next/image";
 import menu from "../Assest/icons8-menu-30.png";
 import cancel from "../Assest/icons8-cancel-24.png";
+import { RiMenu3Line } from "react-icons/ri";
+import { RxCross2 } from "react-icons/rx";
 
 type Component = {
   p: React.HTMLAttributes<HTMLParagraphElement>;
@@ -19,12 +21,22 @@ const Nav: React.FC = () => {
   return (
     <main className="w-[80%] mx-auto h-32 flex justify-between items-center">
       <div>
-        <p className="font-black font-[briem-hand] text-2xl md:text-4xl italic text-gray">
+        <p className="font-black font-[briem-hand] text-2xl md:text-4xl italic">
           Tolulope
         </p>
       </div>
       <div className="lg:hidden " onClick={menuButtonToggle}>
-        <Image src={!showMenu ? menu : cancel} alt="icon" />
+        {!showMenu ? (
+          <span className="transition ease-in-out delay-150 duration-300">
+            {" "}
+            <RiMenu3Line size={"2em"} />
+          </span>
+        ) : (
+          <span className="transition ease-in-out delay-150 duration-300">
+            {" "}
+            <RxCross2 size={"2em"} />
+          </span>
+        )}
       </div>
       {showMenu && (
         <div

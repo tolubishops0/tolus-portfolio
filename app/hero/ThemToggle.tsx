@@ -7,7 +7,9 @@ import Image from "next/image";
 
 export default function ThemeSwitch() {
   const [mounted, setMounted] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(false);
   const { setTheme, resolvedTheme } = useTheme();
+
 
   useEffect(() => setMounted(true), []);
 
@@ -22,8 +24,8 @@ export default function ThemeSwitch() {
           right: "0",
         }}
         src={resolvedTheme === "dark" ? sun : moon}
-        width={36}
-        height={36}
+        width={20}
+        height={20}
         sizes="36x36"
         alt="Loading Light/Dark Toggle"
         priority={false}

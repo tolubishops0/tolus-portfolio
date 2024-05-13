@@ -7,16 +7,19 @@ import SubHero from "./SubHero";
 const Hero = () => {
   const { resolvedTheme } = useTheme();
   console.log(resolvedTheme);
+  const textColor = resolvedTheme === "dark" ? "darkTheme" : "lightTheme";
 
   return (
     <div
+      className={
+        resolvedTheme === "dark"
+          ? "bg-backgroundImageDark"
+          : "bg-backgroundImageLight"
+      }
       style={{
-        backgroundImage:
-          resolvedTheme === "dark"
-            ? `linear-gradient(360deg, rgba(0,0,2,1), rgba(0,0,0,0.85)), url('/noise.svg')`
-            : `linear-gradient(0deg, rgba(185,185,185,1), rgba(0,0,0,0)), url('/noise.svg')`,
         height: "100vh",
         width: "100%",
+        color: `${textColor}`,
       }}>
       <Nav />
       <SubHero />
