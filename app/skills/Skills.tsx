@@ -18,7 +18,7 @@ const Skills: React.FC = () => {
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
       }}>
-      <div className={`w-[80%] mx-auto text-${textColor} py-6 lg:py-8`}>
+      <div className={`w-[80%] mx-auto text-${textColor} py-8`}>
         <h1 className="text:lg sm:text-xl md:text-2xl xl:text-4xl font-black text-center ">
           My Skills
         </h1>

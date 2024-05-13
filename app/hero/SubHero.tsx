@@ -67,13 +67,13 @@ const SubHero: React.FC = () => {
         />
       </div>
 
-      <div className="animate-bounce w-10 absolute bottom-0 hidden lg:block">
+      {/* <div className="animate-bounce w-10 absolute bottom-0 hidden lg:block">
         <img
           style={{ width: "100%", height: "100%" }}
           src={"/icons8-scroll-down-50.png"}
           alt=""
         />
-      </div>
+      </div> */}
 
       {/* <div className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
         --&gt;
