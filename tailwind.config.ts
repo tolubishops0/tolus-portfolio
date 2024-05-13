@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import { useTheme } from "next-themes";
 
 const config: Config = {
   content: [
@@ -12,6 +13,20 @@ const config: Config = {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      },
+      // screens: {
+      //   smallmobile: "640px",
+      //   bigmobile: "768px",
+      //   smalltab: "1024px",
+      //   desktop: "1280px",
+      //   lgdesktop: "1600px",
+      // },
+      colors: {
+        gray: "white",
+        black: "black",
+      },
+      fontFamily: {
+
       },
     },
   },

@@ -1,0 +1,66 @@
+"use client";
+import React from "react";
+import { socialIcons } from "../util";
+import Image from "next/image";
+import arrdown from "../../public/icons8-scroll-down-50.png";
+import ThemeSwitch from "./ThemToggle";
+
+const SubHero: React.FC = () => {
+  const getSocialLinks = (
+    e: React.MouseEvent<HTMLImageElement>,
+    link: string
+  ) => {
+    e.preventDefault();
+    window.open(link, "_blank");
+  };
+
+  return (
+    <div className="relative lg:mt-8 w-[80%] flex flex-col-reverse lg:flex-row items-center justify-center lg:gap-x-8 mx-auto gap-y-4">
+      <ThemeSwitch />
+      <div className="text-gray w-full lg:w-[60%] flex flex-col gap-y-4 xl:gap-y-6">
+        <h1 className="text:lg sm:text-xl md:text-2xl xl:text-4xl font-black ">
+          Tolulope Okunjoyo
+        </h1>
+        <h1 className="text-sm sm:text-base md:text-2xl xl:text-2xl font-bold italic ">
+          Frontend Developer
+        </h1>
+        <p className="text-sm sm:text-base md:text-xl xl:text-xl">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, fuga
+          rerum eum laborum corporis dolores quo vitae aspernatur molestias
+          tempora fugiat architecto voluptates ducimus assumenda.
+        </p>
+        <div className="flex gap-x-4">
+          {socialIcons.map((item, index) => (
+            <Image
+              className="w-[1.7rem] cursor-pointer"
+              key={index}
+              src={item.icon}
+              alt={item.label}
+              onClick={(e) => getSocialLinks(e, item.link)}
+            />
+          ))}
+        </div>
+      </div>
+      <div className="w-full lg:w-[40%]">
+        <img
+          style={{ width: "100%", height: "100%" }}
+          src={"/toluimg.png"}
+          alt=""
+        />
+      </div>
+      <div className="animate-bounce w-10 absolute bottom-0 hidden lg:block">
+        <img
+          style={{ width: "100%", height: "100%" }}
+          src={"/icons8-scroll-down-50.png"}
+          alt=""
+        />
+      </div>
+      {/* <div className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
+        --&gt;
+      </div>
+      ; */}
+    </div>
+  );
+};
+
+export default SubHero;
