@@ -3,7 +3,7 @@ import React, { useRef } from "react";
 import { useTheme } from "next-themes";
 import Image from "next/image";
 import { skills, frameWorks, tools } from "../util";
-import { useScroll, motion, Variants } from "framer-motion";
+import { useScroll, motion, Variants, useTransform } from "framer-motion";
 
 const Skills: React.FC = () => {
   const { resolvedTheme } = useTheme();
@@ -13,6 +13,9 @@ const Skills: React.FC = () => {
     target: ref,
     offset: ["0 1", "center"],
   });
+  const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.9, 1]);
+  const opacityProgress = useTransform(scrollYProgress, [0, 1], [0.7, 1]);
+
   return (
     <div
       style={{
@@ -24,7 +27,7 @@ const Skills: React.FC = () => {
         backgroundRepeat: "no-repeat",
       }}>
       <motion.div
-        style={{ scale: scrollYProgress, opacity: scrollYProgress }}
+        style={{ scale: scaleProgress, opacity: opacityProgress }}
         ref={ref}
         className={`w-[80%] mx-auto text-${textColor} py-8`}>
         <h1 className="text:lg sm:text-xl md:text-2xl xl:text-4xl font-black text-center ">

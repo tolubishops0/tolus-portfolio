@@ -5,7 +5,7 @@ import { socialIcons } from "../util";
 import Image from "next/image";
 import { BsGithub, BsLinkedin, BsTwitterX } from "react-icons/bs";
 import ThemeSwitch from "./ThemToggle";
-import { useScroll, motion, Variants } from "framer-motion";
+import { useScroll, motion, Variants, useTransform } from "framer-motion";
 
 const SubHero: React.FC = () => {
   const { resolvedTheme } = useTheme();
@@ -38,14 +38,17 @@ const SubHero: React.FC = () => {
     target: ref,
     offset: ["0 1", "1.33 1"],
   });
+    const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.9, 1]);
+    const opacityProgress = useTransform(scrollYProgress, [0, 1], [0.7, 1]);
+
 
   return (
-    <motion.div
-      ref={ref}
-      style={{
-        scale: scrollYProgress,
-        opacity: scrollYProgress,
-      }}
+    <div
+      // ref={ref}
+      // style={{
+      //   scale: scrollYProgress,
+      //   opacity: scrollYProgress,
+      // }}
       className="relative md:py-6 lg:py-8 flex flex-col-reverse lg:flex-row items-center justify-center lg:gap-x-8 gap-y-4">
       <ThemeSwitch />
       <div className={`w-full  flex flex-col gap-y-4 xl:gap-y-6`}>
@@ -91,7 +94,7 @@ const SubHero: React.FC = () => {
         --&gt;
       </div>
       ; */}
-    </motion.div>
+    </div>
   );
 };
 
