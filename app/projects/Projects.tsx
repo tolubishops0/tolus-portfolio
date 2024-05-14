@@ -49,7 +49,7 @@ const Projects = () => {
             {project.map((item, index) => (
               <div
                 key={index}
-                className="flip-card w-full cursor-pointer h-[10rem] md:w-[48%] border rounded"
+                className="flip-card w-full cursor-pointer h-[10rem] md:w-[48%] lg:w-[40%] rounded"
                 onClick={() => handleFlip(index)}
                 onMouseEnter={() => handleFlip(index)}
                 onMouseLeave={() => setIsAnimated(false)}>
