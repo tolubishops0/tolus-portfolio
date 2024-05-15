@@ -6,6 +6,7 @@ import Image from "next/image";
 import { BsGithub, BsLinkedin, BsTwitterX } from "react-icons/bs";
 import ThemeSwitch from "./ThemToggle";
 import { useScroll, motion, Variants, useTransform } from "framer-motion";
+import { ImMail3 } from "react-icons/im";
 
 const SubHero: React.FC = () => {
   const { resolvedTheme } = useTheme();
@@ -28,6 +29,11 @@ const SubHero: React.FC = () => {
       icon: <BsLinkedin size={"1.5em"} />,
       link: "https://www.linkedin.com/in/tolujoyo/",
     },
+    {
+      label: "linkedin",
+      icon: <ImMail3 size={"1.5em"} />,
+      link: "https://www.linkedin.com/in/tolujoyo/",
+    },
   ];
 
   const getSocialLinks = (link: string) => {
@@ -38,9 +44,8 @@ const SubHero: React.FC = () => {
     target: ref,
     offset: ["0 1", "1.33 1"],
   });
-    const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.9, 1]);
-    const opacityProgress = useTransform(scrollYProgress, [0, 1], [0.7, 1]);
-
+  const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.9, 1]);
+  const opacityProgress = useTransform(scrollYProgress, [0, 1], [0.7, 1]);
 
   return (
     <div

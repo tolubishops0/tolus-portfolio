@@ -4,6 +4,7 @@ import { useTheme } from "next-themes";
 import Image from "next/image";
 import { project } from "../util";
 import { useScroll, motion, Variants, useTransform } from "framer-motion";
+import { FaArrowRight } from "react-icons/fa6";
 
 const Projects = () => {
   const { resolvedTheme } = useTheme();
@@ -45,11 +46,11 @@ const Projects = () => {
           <h1 className="text:lg sm:text-xl md:text-2xl xl:text-4xl font-black text-center">
             Projects
           </h1>
-          <div className="flex flex-col md:flex-row md:flex-wrap items-center justify-between gap-x-5 md:gap-x-0 gap-y-6 w-full h-full mx-auto mt-10">
+          <div className="flex flex-col md:flex-row md:flex-wrap items-center justify-between gap-x-5 md:gap-x-2 gap-y-6 w-full h-full mx-auto mt-10">
             {project.map((item, index) => (
               <div
                 key={index}
-                className="flip-card w-full cursor-pointer h-[10rem] md:w-[48%] lg:w-[40%] rounded"
+                className="flip-card w-full cursor-pointer h-[10rem] md:w-[48%] xl:w-[30%] rounded"
                 onClick={() => handleFlip(index)}
                 onMouseEnter={() => handleFlip(index)}
                 onMouseLeave={() => setIsAnimated(false)}>
@@ -75,15 +76,22 @@ const Projects = () => {
                       <div className="flex items-center justify-between w-full">
                         <button
                           onClick={() => handleLinks(item.github)}
-                          className="border-2 rounded border-neutral-300 py-1 w-[35%] text-sm">
-                          view github
+                          className="flex items-center py-1 text-sm">
+                          github{" "}
+                          <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
+                            --&gt;
+                          </span>
                         </button>
                         <button
                           onClick={() => handleLinks(item.link)}
-                          className="border-2 rounded border-neutral-300 py-1 w-[35%] text-sm">
-                          view live
+                          className="flex items-end py-1  text-sm">
+                          live{" "}
+                          <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
+                            {" "}
+                            --&gt;
+                          </span>
                         </button>
-                      </div>{" "}
+                      </div>
                     </div>
                   </div>
                 </motion.div>

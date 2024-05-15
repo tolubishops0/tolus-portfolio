@@ -21,6 +21,8 @@ import anike from "../public/anike.png";
 import mhubs from "../public/mhub.png";
 import scissor from "../public/scis.png";
 import spotify from "../public/spotufy.png";
+import game from "../public/game.png";
+import ticket from "../public/ticket.png";
 
 type NavContentType = {
   label: string;
@@ -52,20 +54,21 @@ export const socialIcons: SocialIcons[] = [
 ];
 
 export const navContent: NavContentType[] = [
-  {
-    label: "About-Me",
-    link: "",
-  },
+
   {
     label: "Skills",
-    link: "",
+    link: "#skills",
   },
   {
     label: "Projects",
-    link: "",
+    link: "#projects",
   },
   {
     label: "Contact me",
+    link: "#contactme",
+  },
+  {
+    label: "Resume",
     link: "",
   },
 ];
@@ -183,5 +186,19 @@ export const project = [
     text: "lorem ipsum dolor sit amet, consectetur adip lorem ipsum dolor sit amet, consectetur adip lorem ipsum dolor sit amet, consectetur adip",
     github: "https://github.com/tolubishops0/scissors",
     link: "https://moviehubb-will.netlify.app/",
+  },
+  {
+    img: ticket,
+    label: "OverView",
+    text: "lorem ipsum dolor sit amet, consectetur adip lorem ipsum dolor sit amet, consectetur adip lorem ipsum dolor sit amet, consectetur adip",
+    github: "https://github.com/tolubishops0/ajeoba",
+    link: "https://courageous-twilight-3ba4d7.netlify.app/",
+  },
+  {
+    img: game,
+    label: "Guess the number",
+    text: "lorem ipsum dolor sit amet, consectetur adip lorem ipsum dolor sit amet, consectetur adip lorem ipsum dolor sit amet, consectetur adip",
+    github: "https://github.com/tolubishops0/Guess-The-Number",
+    link: "https://tolubishops0.github.io/Guess-The-Number/",
   },
 ];

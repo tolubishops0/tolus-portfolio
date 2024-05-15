@@ -56,7 +56,8 @@ body {
 }
 .flip-card-back {
   transform: rotateY(180deg);
-  background-color: red;
+  /* background-image: url('/public/noise.svg'); */
+  background-color: rgba(34, 31, 31, 0.5);
   /* height: 100%; */
   width: 100%;
 }
