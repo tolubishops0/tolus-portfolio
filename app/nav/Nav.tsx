@@ -25,10 +25,7 @@ const Nav: React.FC = () => {
 
   console.log(showMenu, "sjow");
 
-  const handleTabClick = (
-    e: React.MouseEvent<HTMLParagraphElement, MouseEvent>,
-    tab: string
-  ) => {
+  const handleTabClick = (e: React.MouseEvent<HTMLLIElement>, tab: string) => {
     e.preventDefault();
     setShowMenu(false);
     setActiveTab(tab);

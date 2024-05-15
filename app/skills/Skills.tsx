@@ -5,10 +5,11 @@ import Image from "next/image";
 import { skills, frameWorks, tools } from "../util";
 import { useScroll, motion, Variants, useTransform } from "framer-motion";
 
+
 const Skills: React.FC = () => {
   const { resolvedTheme } = useTheme();
   const textColor = resolvedTheme === "dark" ? "darkTheme" : "lightTheme";
-  const ref = useRef<HTMLElement>(null);
+  const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["0 1", "center"],
