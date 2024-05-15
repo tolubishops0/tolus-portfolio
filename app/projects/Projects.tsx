@@ -11,7 +11,7 @@ const Projects = () => {
   const [isFlippedIndex, setIsFlippedIndex] = useState<number>(-1);
   const [isAnimated, setIsAnimated] = useState<Boolean>(false);
   const textColor = resolvedTheme === "dark" ? "darkTheme" : "lightTheme";
-  const ref = useRef<HTMLElement>(null);
+  const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["0 1", "center"],
