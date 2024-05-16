@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useMemo, useContext, useEffect } from "react";
-import Image from "next/image";
+import { useTheme } from "next-themes";
 import Projects from "./hero/HomePage/Projects";
 import Hero from "./hero/HomePage/HeroSecion";
 import Skills from "./hero/HomePage/Skills";
@@ -16,6 +16,8 @@ import particles from "./partcles";
 import { loadSlim } from "@tsparticles/slim";
 
 const Home = () => {
+  const { resolvedTheme } = useTheme();
+  console.log(resolvedTheme, "resolvedTheme");
   const [init, setInit] = useState(false);
   useEffect(() => {
     initParticlesEngine(async (engine) => {
@@ -31,7 +33,6 @@ const Home = () => {
 
   const options: ISourceOptions = useMemo(
     () => ({
-      
       fpsLimit: 120,
       interactivity: {
         events: {
@@ -56,13 +57,13 @@ const Home = () => {
       },
       particles: {
         color: {
-          value: "#ffffff",
+          value: resolvedTheme === "dark" ? "#5fcbd3" : "#5fcbd3",
         },
         links: {
-          color: "#ffffff",
+          color: resolvedTheme === "dark" ? "#ffffff" : "#000000",
           distance: 150,
           enable: true,
-          opacity: 0.5,
+          opacity: 0,
           width: 1,
         },
         move: {

@@ -78,7 +78,11 @@ const Nav: React.FC = () => {
                             key={index}>
                             <a
                               className={`
-                 ${activeTab === item.label ? `border-b-2 border-white` : ""}`}>
+                 ${
+                   activeTab === item.label
+                     ? `transition duration-1000 border-b-2 border-[#5fcbd3]`
+                     : ""
+                 }`}>
                               {item.label}
                             </a>
                           </motion.p>
@@ -99,7 +103,11 @@ const Nav: React.FC = () => {
               key={index}>
               <a
                 className={`
-                 ${activeTab === item.label ? `border-b-2 border-white` : ""}`}>
+                 ${
+                   activeTab === item.label
+                     ? `transition duration-1000 mb-1 border-b-2 border-[#5fcbd3]`
+                     : ""
+                 }`}>
                 {item.label}
               </a>
             </p>
