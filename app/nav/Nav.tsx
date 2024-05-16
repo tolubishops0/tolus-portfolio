@@ -1,18 +1,20 @@
 "use client";
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, forwardRef } from "react";
 import { navContent } from "../util";
 import { useTheme } from "next-themes";
 import { useClickAway } from "react-use";
 import { RiMenu3Line } from "react-icons/ri";
 
 import { AnimatePresence, motion } from "framer-motion";
+import Link from "next/link";
 
 type Component = {
   p: React.HTMLAttributes<HTMLParagraphElement>;
   div: React.HTMLAttributes<HTMLDivElement>;
+
 };
 
-const Nav: React.FC = () => {
+const Nav = forwardRef((props, reff) => {
   const { resolvedTheme } = useTheme();
   const ref = useRef<HTMLDivElement>(null);
   const [showMenu, setShowMenu] = useState<Boolean>(false);
@@ -30,11 +32,9 @@ const Nav: React.FC = () => {
     e.preventDefault();
     setShowMenu(false);
     setActiveTab(tab);
-    console.log(typeof tab);
-    const element = document.querySelector(`#${tab}`);
-    if (element) {
-      console.log(element);
-      element.scrollIntoView({ behavior: "smooth" });
+    const section = document.getElementById(tab);
+    if (section) {
+      section?.scrollIntoView({ behavior: "smooth" });
     }
   };
 
@@ -73,7 +73,7 @@ const Nav: React.FC = () => {
                         return (
                           <motion.p
                             {...framerText(index)}
-                            onClick={(e) => handleTabClick(e, item.label)}
+                            onClick={(e) => handleTabClick(e, item.link)}
                             className=" py-1 w-full text-medium font-semibold cursor-pointer "
                             key={index}>
                             <a
@@ -98,16 +98,18 @@ const Nav: React.FC = () => {
         <div className="hidden lg:flex gap-x-8 items-center justify-center">
           {navContent.map((item, index) => (
             <p
-              onClick={(e) => handleTabClick(e, item.label)}
+              onClick={(e) => handleTabClick(e, item.link)}
               className="text-gray text-base font-semibold cursor-pointer "
               key={index}>
               <a
                 className={`
-                 ${
-                   activeTab === item.label
-                     ? `transition duration-1000 mb-1 border-b-2 border-[#5fcbd3]`
-                     : ""
-                 }`}>
+          ${
+            activeTab === item.link
+              ? `transition duration-1000 mb-1 border-b-2 border-[#5fcbd3]`
+              : ""
+          }`}
+                // href={item.link}
+              >
                 {item.label}
               </a>
             </p>
@@ -116,7 +118,7 @@ const Nav: React.FC = () => {
       </div>
     </main>
   );
-};
+});
 
 export default Nav;
 

@@ -10,7 +10,6 @@ export default function ThemeSwitch() {
   const [isDarkMode, setIsDarkMode] = useState(false);
   const { setTheme, resolvedTheme } = useTheme();
 
-
   useEffect(() => setMounted(true), []);
 
   if (!mounted) return null;
@@ -24,8 +23,8 @@ export default function ThemeSwitch() {
           right: "0",
         }}
         src={resolvedTheme === "dark" ? sun : moon}
-        width={24}
-        height={24}
+        width={30}
+        height={30}
         sizes="36x36"
         alt="Loading Light/Dark Toggle"
         priority={false}

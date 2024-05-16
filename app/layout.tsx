@@ -19,14 +19,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body
-        className={` bg-slate-100 dark:bg-black text-black dark:text-white ${inter.className}`}>
-        <ThemeProvider>
-          <Nav />
-          <main>{children}</main>
-          <Footer />
-        </ThemeProvider>
-      </body>
+ 
+        <body
+          className={` bg-slate-100 dark:bg-[#121212] text-black dark:text-white ${inter.className}`}>
+          <ThemeProvider>
+            <main>{children}</main>
+          </ThemeProvider>
+        </body>
     </html>
   );
 }

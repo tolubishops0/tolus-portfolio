@@ -56,16 +56,16 @@ export const socialIcons: SocialIcons[] = [
 export const navContent: NavContentType[] = [
   {
     label: "Skills",
-    link: "scrollToSection(sectionRef1)",
+    link: "skills",
   },
   {
     label: "Projects",
-    link: "scrollToSection(sectionRef2)",
+    link: "projects",
   },
-  // {
-  //   label: "Contact me",
-  //   link: "#contactme",
-  // },
+  {
+    label: "About me",
+    link: "about-me",
+  },
   {
     label: "Resume",
     link: "",

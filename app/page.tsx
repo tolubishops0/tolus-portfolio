@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useMemo, useContext, useEffect } from "react";
+import React, { useState, useMemo, forwardRef, useEffect, useRef } from "react";
 import { useTheme } from "next-themes";
 import Projects from "./hero/HomePage/Projects";
 import Hero from "./hero/HomePage/HeroSecion";
@@ -14,11 +14,15 @@ import {
 import particles from "./partcles";
 
 import { loadSlim } from "@tsparticles/slim";
+import Nav from "./nav/Nav";
+import Footer from "./footer/Footer";
 
 const Home = () => {
   const { resolvedTheme } = useTheme();
-  console.log(resolvedTheme, "resolvedTheme");
   const [init, setInit] = useState(false);
+
+  const navRef = useRef(null);
+
   useEffect(() => {
     initParticlesEngine(async (engine) => {
       await loadSlim(engine);
@@ -104,10 +108,18 @@ const Home = () => {
           particlesLoaded={particlesLoaded}
           options={options}
         />
-        <div className="w-[80%] mx-auto">
-          <Hero />
-          <Skills />
-          <Projects />
+        <div className="">
+          <Nav ref={navRef} />
+          <div className="w-[80%] mx-auto">
+            <Hero />
+            <div id="skills">
+              <Skills />
+            </div>
+            <div id="projects">
+              <Projects />
+            </div>
+          </div>
+          <Footer />
         </div>
       </>
     );
