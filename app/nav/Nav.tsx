@@ -11,7 +11,6 @@ import Link from "next/link";
 type Component = {
   p: React.HTMLAttributes<HTMLParagraphElement>;
   div: React.HTMLAttributes<HTMLDivElement>;
-
 };
 
 const Nav = forwardRef((props, reff) => {
@@ -76,15 +75,30 @@ const Nav = forwardRef((props, reff) => {
                             onClick={(e) => handleTabClick(e, item.link)}
                             className=" py-1 w-full text-medium font-semibold cursor-pointer "
                             key={index}>
-                            <a
-                              className={`
-                 ${
-                   activeTab === item.label
-                     ? `transition duration-1000 border-b-2 border-[#5fcbd3]`
-                     : ""
-                 }`}>
-                              {item.label}
-                            </a>
+                            {item.link === "about-me" || item.link === "/" ? (
+                              <Link
+                                className={`
+          ${
+            activeTab === item.link
+              ? `transition duration-1000 mb-1 border-b-2 border-[#5fcbd3]`
+              : ""
+          }`}
+                                href={`/${item.link}`}>
+                                {item.label}
+                              </Link>
+                            ) : (
+                              <a
+                                className={`
+          ${
+            activeTab === item.link
+              ? `transition duration-1000 mb-1 border-b-2 border-[#5fcbd3]`
+              : ""
+          }`}
+                                // href={item.link}
+                              >
+                                {item.label}
+                              </a>
+                            )}
                           </motion.p>
                         );
                       })}
@@ -101,17 +115,30 @@ const Nav = forwardRef((props, reff) => {
               onClick={(e) => handleTabClick(e, item.link)}
               className="text-gray text-base font-semibold cursor-pointer "
               key={index}>
-              <a
-                className={`
+              {item.link === "about-me" || item.link === "/" ? (
+                <Link
+                  className={`
           ${
             activeTab === item.link
               ? `transition duration-1000 mb-1 border-b-2 border-[#5fcbd3]`
               : ""
           }`}
-                // href={item.link}
-              >
-                {item.label}
-              </a>
+                  href={`/${item.link}`}>
+                  {item.label}
+                </Link>
+              ) : (
+                <a
+                  className={`
+          ${
+            activeTab === item.link
+              ? `transition duration-1000 mb-1 border-b-2 border-[#5fcbd3]`
+              : ""
+          }`}
+                  // href={item.link}
+                >
+                  {item.label}
+                </a>
+              )}
             </p>
           ))}
         </div>

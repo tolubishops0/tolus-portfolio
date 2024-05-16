@@ -55,6 +55,10 @@ export const socialIcons: SocialIcons[] = [
 
 export const navContent: NavContentType[] = [
   {
+    label: "Home",
+    link: "/",
+  },
+  {
     label: "Skills",
     link: "skills",
   },
