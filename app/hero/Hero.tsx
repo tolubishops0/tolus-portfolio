@@ -10,25 +10,28 @@ const Hero = () => {
   const textColor = resolvedTheme === "dark" ? "darkTheme" : "lightTheme";
 
   return (
-    <div
-      className={
-        resolvedTheme === "dark"
-          ? "bg-backgroundImageDark"
-          : "bg-backgroundImageLight"
-      }>
+    <>
       <div
-        style={{
-          // height: "100vh",
-          width: "80%",
-          margin: "0 auto",
-          color: `${textColor}`,
-        }}>
-        {" "}
-        <Nav />
-        <SubHero />
-        {/* <Skills /> */}
+        className={
+          resolvedTheme === "dark"
+            ? "bg-backgroundImageDark"
+            : "bg-backgroundImageLight"
+        }>
+        <div
+          style={{
+            height: "100vh",
+            width: "80%",
+            margin: "0 auto",
+            color: `${textColor}`,
+          }}>
+          {" "}
+          <Nav />
+          <SubHero />
+          {/* <Skills /> */}
+        </div>
       </div>
-    </div>
+      
+    </>
   );
 };
 

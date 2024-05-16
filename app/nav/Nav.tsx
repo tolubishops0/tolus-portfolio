@@ -1,10 +1,10 @@
 "use client";
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useRef } from "react";
 import { navContent } from "../util";
 import { useTheme } from "next-themes";
 import { useClickAway } from "react-use";
 import { RiMenu3Line } from "react-icons/ri";
-import { RxCross2 } from "react-icons/rx";
+
 import { AnimatePresence, motion } from "framer-motion";
 
 type Component = {
@@ -14,7 +14,7 @@ type Component = {
 
 const Nav: React.FC = () => {
   const { resolvedTheme } = useTheme();
-  const ref = useRef(null);
+  const ref = useRef<HTMLDivElement>(null);
   const [showMenu, setShowMenu] = useState<Boolean>(false);
   const [activeTab, setActiveTab] = useState<String>("");
   useClickAway(ref, () => setShowMenu(false));
@@ -23,12 +23,19 @@ const Nav: React.FC = () => {
     setShowMenu(!showMenu);
   };
 
-  console.log(showMenu, "sjow");
-
-  const handleTabClick = (e: React.MouseEvent<HTMLLIElement>, tab: string) => {
+  const handleTabClick = (
+    e: React.MouseEvent<HTMLParagraphElement>,
+    tab: string
+  ) => {
     e.preventDefault();
     setShowMenu(false);
     setActiveTab(tab);
+    console.log(typeof tab)
+    const element = document.querySelector(`#${tab}`);
+    if (element) {
+      console.log(element);
+      element.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   return (
@@ -55,12 +62,12 @@ const Nav: React.FC = () => {
                 ref={ref}
                 aria-label="Sidebar">
                 <>
-                  <ul
+                  <div
                     ref={ref}
                     className="w-[80%] flex flex-col items-center justify-start mx-auto gap-10 p-5 mt-28">
                     {navContent.map((item, index) => {
                       return (
-                        <motion.li
+                        <motion.p
                           {...framerText(index)}
                           onClick={(e) => handleTabClick(e, item.label)}
                           className=" py-1 w-full text-medium font-semibold cursor-pointer "
@@ -70,10 +77,10 @@ const Nav: React.FC = () => {
                  ${activeTab === item.label ? `border-b-2 border-white` : ""}`}>
                             {item.label}
                           </a>
-                        </motion.li>
+                        </motion.p>
                       );
                     })}
-                  </ul>
+                  </div>
                 </>
               </motion.div>
             </>
@@ -83,9 +90,14 @@ const Nav: React.FC = () => {
       <div className="hidden lg:flex gap-x-8 items-center justify-center">
         {navContent.map((item, index) => (
           <p
+            onClick={(e) => handleTabClick(e, item.label)}
             className="text-gray text-base font-semibold cursor-pointer "
             key={index}>
-            <a>{item.label}</a>
+            <a
+              className={`
+                 ${activeTab === item.label ? `border-b-2 border-white` : ""}`}>
+              {item.label}
+            </a>
           </p>
         ))}
       </div>

@@ -31,6 +31,7 @@ const Projects = () => {
 
   return (
     <div
+      id="projects"
       style={{
         background:
           resolvedTheme === "dark"

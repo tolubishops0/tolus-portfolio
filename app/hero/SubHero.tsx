@@ -10,7 +10,6 @@ import { ImMail3 } from "react-icons/im";
 
 const SubHero: React.FC = () => {
   const { resolvedTheme } = useTheme();
-  console.log(resolvedTheme);
   const textColor = resolvedTheme === "dark" ? "darkTheme" : "lightTheme";
 
   const socialIcons = [
@@ -56,7 +55,8 @@ const SubHero: React.FC = () => {
       // }}
       className="relative md:py-6 lg:py-8 flex flex-col-reverse lg:flex-row items-center justify-center lg:gap-x-8 gap-y-4">
       <ThemeSwitch />
-      <div className={`w-full pb-4 lg:pb-0 flex flex-col gap-y-4 xl:gap-y-6`}>
+      <div
+        className={`w-full pb-4 lg:pb-0 flex flex-col gap-y-4 xl:gap-y-6`}>
         <h1 className="text:lg sm:text-xl md:text-2xl xl:text-4xl font-black ">
           Tolulope Okunjoyo
         </h1>

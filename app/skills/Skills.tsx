@@ -19,6 +19,7 @@ const Skills: React.FC = () => {
 
   return (
     <div
+      id="skills"
       style={{
         background:
           resolvedTheme === "dark"
