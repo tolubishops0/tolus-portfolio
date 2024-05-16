@@ -41,8 +41,7 @@ const Nav: React.FC = () => {
   return (
     <main
       style={{
-        boxShadow:
-          "0 0 15px 0 rgb(210 50 320 / 0.9)",
+        boxShadow: "0 0 10px 0 #5fcbd3",
       }}>
       <div className="w-[80%] mx-auto h-32 flex justify-between items-center">
         <div className="z-50">

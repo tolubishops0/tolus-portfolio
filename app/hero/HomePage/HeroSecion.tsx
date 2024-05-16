@@ -53,7 +53,7 @@ const SubHero: React.FC = () => {
       //   scale: scrollYProgress,
       //   opacity: scrollYProgress,
       // }}
-      className="relative  md:py-6 lg:py-[6rem] flex flex-col-reverse lg:flex-row items-center justify-center lg:gap-x-8 gap-y-4">
+      className="relative w-full md:py-6 lg:py-[6rem] flex flex-col-reverse lg:flex-row items-center justify-center lg:gap-x-8 gap-y-4">
       <ThemeSwitch />
       <div
         className={`w-full pb-4 lg:pb-0 flex flex-col gap-y-4 xl:gap-y-6`}>

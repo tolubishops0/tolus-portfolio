@@ -44,7 +44,7 @@ const Projects = () => {
       <motion.div
         style={{ scale: scaleProgress, opacity: opacityProgress }}
         ref={ref}>
-        <div className={`w-[80%] mx-auto text-${textColor} py-8`}>
+        <div className={`w-full mx-auto text-${textColor} py-8`}>
           <h1 className="text:lg sm:text-xl md:text-2xl xl:text-4xl font-black text-center">
             Projects
           </h1>

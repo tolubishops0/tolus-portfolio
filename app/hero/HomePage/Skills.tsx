@@ -31,7 +31,7 @@ const Skills: React.FC = () => {
       <motion.div
         style={{ scale: scaleProgress, opacity: opacityProgress }}
         ref={ref}
-        className={`w-[80%] mx-auto text-${textColor} py-8`}>
+        className={`w-full mx-auto text-${textColor} py-8`}>
         <h1 className="text:lg sm:text-xl md:text-2xl xl:text-4xl font-black text-center ">
           My Skills
         </h1>

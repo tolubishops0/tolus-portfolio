@@ -9,9 +9,12 @@ const config: Config = {
   theme: {
     extend: {
       backgroundImage: {
-        backgroundImageLight: `linear-gradient(to top, rgba(208,208,212,1), rgba(82,80,80,0.71)), url('/noise.svg')`,
-        backgroundImageDark: `linear-gradient(to top, rgba(6,6,6,1), rgba(30,29,29,0.71)), url('/noise.svg')`,
+        backgroundImage: `url("/noise.svg")`,
       },
+      // backgroundImage: {
+      //   backgroundImageLight: `linear-gradient(to top, rgba(208,208,212,1), rgba(82,80,80,0.71)), url('/noise.svg')`,
+      //   backgroundImageDark: `linear-gradient(to top, rgba(6,6,6,1), rgba(30,29,29,0.71)), url('/noise.svg')`,
+      // },
       // screens: {
       //   smallmobile: "640px",
       //   bigmobile: "768px",
@@ -19,10 +22,10 @@ const config: Config = {
       //   desktop: "1280px",
       //   lgdesktop: "1600px",
       // }
-      colors: {
-        lightTheme: "black",
-        darkTheme: "white",
-      },
+      // colors: {
+      //   lightTheme: "black",
+      //   darkTheme: "white",
+      // },
       fontFamily: {},
     },
   },

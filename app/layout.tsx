@@ -4,6 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "./themeProvider";
 import Nav from "./nav/Nav";
 import Footer from "./footer/Footer";
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -18,7 +19,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`bg-gray-300 dark:bg-black ${inter.className}`}>
+      <body
+        className={` bg-slate-100 dark:bg-black text-black dark:text-white ${inter.className}`}>
         <ThemeProvider>
           <Nav />
           <main>{children}</main>
