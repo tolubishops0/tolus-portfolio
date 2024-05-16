@@ -2,9 +2,8 @@
 import React, { useRef } from "react";
 import { useTheme } from "next-themes";
 import Image from "next/image";
-import { skills, frameWorks, tools } from "../util";
-import { useScroll, motion, Variants, useTransform } from "framer-motion";
-
+import { skills, tools } from "../../util";
+import { useScroll, motion, useTransform } from "framer-motion";
 
 const Skills: React.FC = () => {
   const { resolvedTheme } = useTheme();
@@ -19,15 +18,16 @@ const Skills: React.FC = () => {
 
   return (
     <div
-      id="skills"
-      style={{
-        background:
-          resolvedTheme === "dark"
-            ? `linear-gradient( to bottom, rgba(6,6,6,1), rgba(30,29,29,0.71)), url('/noise.svg') `
-            : `linear-gradient(to top, rgba(82,80,80,0.71), rgba(208,208,212,1)), url('/noise.svg')`,
-        backgroundSize: "cover",
-        backgroundRepeat: "no-repeat",
-      }}>
+    // id="skills"
+    // style={{
+    //   background:
+    //     resolvedTheme === "dark"
+    //       ? `linear-gradient( to bottom, rgba(6,6,6,1), rgba(30,29,29,0.71)), url('/noise.svg') `
+    //       : `linear-gradient(to top, rgba(82,80,80,0.71), rgba(208,208,212,1)), url('/noise.svg')`,
+    //   backgroundSize: "cover",
+    //   backgroundRepeat: "no-repeat",
+    // }}
+    >
       <motion.div
         style={{ scale: scaleProgress, opacity: opacityProgress }}
         ref={ref}

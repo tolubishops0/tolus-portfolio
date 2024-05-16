@@ -1,17 +1,17 @@
 import Image from "next/image";
-import Hero from "./hero/Hero";
-import Skills from "./skills/Skills";
-import Projects from "./projects/Projects";
-import Footer from "./footer/Footer";
+import Homepge from "./hero/HomePage/Homepge";
+import Projects from "./hero/HomePage/Projects";
+import Hero from "./hero/HomePage/HeroSecion";
+import Skills from "./hero/HomePage/Skills";
 
-export default function Home() {
+const Home = () => {
   return (
-    <main>
-      {/* <main className="flex min-h-screen flex-col items-center justify-between p-24"> */}
-      <Hero  />
+    <div className="w-[80%] mx-auto">
+      <Hero />
       <Skills />
       <Projects />
-      <Footer />
-    </main>
+    </div>
   );
-}
+};
+
+export default Home;

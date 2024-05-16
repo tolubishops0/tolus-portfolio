@@ -1,10 +1,10 @@
 "use client";
 import React, { useRef } from "react";
 import { useTheme } from "next-themes";
-import { socialIcons } from "../util";
+import { socialIcons } from "../../util";
 import Image from "next/image";
 import { BsGithub, BsLinkedin, BsTwitterX } from "react-icons/bs";
-import ThemeSwitch from "./ThemToggle";
+import ThemeSwitch from "../ThemToggle";
 import { useScroll, motion, Variants, useTransform } from "framer-motion";
 import { ImMail3 } from "react-icons/im";
 
@@ -53,7 +53,7 @@ const SubHero: React.FC = () => {
       //   scale: scrollYProgress,
       //   opacity: scrollYProgress,
       // }}
-      className="relative md:py-6 lg:py-8 flex flex-col-reverse lg:flex-row items-center justify-center lg:gap-x-8 gap-y-4">
+      className="relative  md:py-6 lg:py-[6rem] flex flex-col-reverse lg:flex-row items-center justify-center lg:gap-x-8 gap-y-4">
       <ThemeSwitch />
       <div
         className={`w-full pb-4 lg:pb-0 flex flex-col gap-y-4 xl:gap-y-6`}>

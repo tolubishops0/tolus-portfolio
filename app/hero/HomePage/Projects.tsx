@@ -2,7 +2,7 @@
 import React, { useRef, useState } from "react";
 import { useTheme } from "next-themes";
 import Image from "next/image";
-import { project } from "../util";
+import { project } from "../../util";
 import { useScroll, motion, Variants, useTransform } from "framer-motion";
 import { FaArrowRight } from "react-icons/fa6";
 
@@ -32,14 +32,15 @@ const Projects = () => {
   return (
     <div
       id="projects"
-      style={{
-        background:
-          resolvedTheme === "dark"
-            ? `linear-gradient( to bottom, rgba(30,29,29,0.71), rgba(6,6,6,1)), url('/noise.svg') `
-            : `linear-gradient(to top, rgba(208,208,212,1), rgba(82,80,80,0.71)), url('/noise.svg')`,
-        backgroundSize: "cover",
-        backgroundRepeat: "no-repeat",
-      }}>
+      // style={{
+      //   background:
+      //     resolvedTheme === "dark"
+      //       ? `linear-gradient( to bottom, rgba(30,29,29,0.71), rgba(6,6,6,1)), url('/noise.svg') `
+      //       : `linear-gradient(to top, rgba(208,208,212,1), rgba(82,80,80,0.71)), url('/noise.svg')`,
+      //   backgroundSize: "cover",
+      //   backgroundRepeat: "no-repeat",
+      // }}
+    >
       <motion.div
         style={{ scale: scaleProgress, opacity: opacityProgress }}
         ref={ref}>
