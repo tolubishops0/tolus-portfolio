@@ -10,9 +10,9 @@ const Footer = () => {
     window.open(link, "_blank");
   };
   return (
-    <div className="bg-black text-white">
-      <div className="flex flex-col gap-y-4 items-center justify-center h-[30vh] w-[80%">
-        <div className="flex items-center justify-center gap-x-6">
+    <div className="bg-black text-white pt-12 pb-6 flex flex-col gap-y-8 ">
+      <div className="flex flex-col gap-y-8 items-center justify-center w-[80%] mx-auto ">
+        <div className="flex justify-left items-start w-full gap-x-6 mx-auto ">
           {socialIcons.map((item, index) => (
             <span
               className=" cursor-pointer"
@@ -22,10 +22,21 @@ const Footer = () => {
             </span>
           ))}
         </div>
-        <div className="text-center text-sm">
-          <p className="italic mb-1">{`@${date} Tolulope Okunjoyo`}</p>
-          <span> All rights reserved</span>
+        <div className="flex flex-col gap-y-4 ">
+          <h1 className="text-[#5fcbd3] sm:text-xl md:text-2xl xl:text-4xl font-black ">
+            Tolulope Okunjoyo
+          </h1>
+          <p className="text-xs  md:text-lg xl:text-xl">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore,
+            fuga rerum eum laborum corporis dolores quo vitae aspernatur
+            molestias tempora fugiat architecto voluptates ducimus assumenda.
+          </p>
         </div>
+      </div>
+      <hr className="border-t-1 border-[#5fcbd3] w-[100%]" />
+      <div className="text-center text-xs lg:text-sm flex justify-between items-center w-[80%] mx-auto">
+        <p className="italic mb-1">{`@${date} Tolulope Okunjoyo`}</p>
+        <span> All rights reserved</span>
       </div>
     </div>
   );

@@ -21,7 +21,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
  
         <body
-          className={` bg-slate-100 dark:bg-[#121212] text-black dark:text-white ${inter.className}`}>
+          className={` bg-slate-300 dark:bg-[#121212] text-black dark:text-white ${inter.className}`}>
           <ThemeProvider>
             <main>{children}</main>
           </ThemeProvider>

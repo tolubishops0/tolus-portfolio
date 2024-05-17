@@ -65,7 +65,7 @@ const Nav = forwardRef((props, reff) => {
                   className="fixed bottom-0 left-0 right-0 top-0 z-40 bg-[rgba(0,0,0,0.1)] backdrop-blur-sm"></motion.div>
                 <motion.div
                   {...framerSidebarPanel}
-                  className="fixed top-0 bottom-0 left-0 z-40 w-1/2 h-screen border-r-2 border-zinc-800 bg-zinc-900"
+                  className="fixed top-0 bottom-0 left-0 z-40 w-1/2 h-screen border-r-2 border-[transparent] bg-slate-300  dark:bg-[#121212]"
                   ref={ref}
                   aria-label="Sidebar">
                   <>
