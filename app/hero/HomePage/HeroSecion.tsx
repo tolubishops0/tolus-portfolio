@@ -69,7 +69,7 @@ const SubHero: React.FC = () => {
                 "https://drive.google.com/file/d/1P1BcKNYJ1vT70LuKWF551izRfGOABQLX/view?usp=drivesdk"
               )
             }
-            className="mt-2 flex items-end py-1 font-bold text-base text-[#5fcbd3]">
+            className="mt-2 flex items-end py-1 font-bold text-base text-[#5fcbd3] hover:scale-105 transition-transform duration-200">
             View Resume
             <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
               {" "}

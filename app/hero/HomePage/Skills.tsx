@@ -22,7 +22,7 @@ const Skills = forwardRef(() => {
       <motion.div
         style={{ scale: scaleProgress, opacity: opacityProgress }}
         ref={ref}
-        className={`w-full mx-auto text-${textColor} pb-[2rem]  lg:pb-[5rem]`}>
+        className={`w-full mx-auto text-${textColor} py-[2rem]  lg:py-[5rem]`}>
         <h1 className=" text-[#5fcbd3] sm:text-xl md:text-2xl xl:text-4xl font-black text-center ">
           My Skills
         </h1>
