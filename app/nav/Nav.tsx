@@ -147,6 +147,8 @@ const Nav = forwardRef((props, reff) => {
   );
 });
 
+Nav.displayName = "Nav";
+
 export default Nav;
 
 const framerSidebarBackground = {

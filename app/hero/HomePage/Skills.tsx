@@ -23,7 +23,7 @@ const Skills = forwardRef(() => {
         style={{ scale: scaleProgress, opacity: opacityProgress }}
         ref={ref}
         className={`w-full mx-auto text-${textColor} py-[3rem] pb-[2rem] xl:pt-[4rem] xl:pb-[4rem]`}>
-        <h1 className="text:lg  text-[#5fcbd3] sm:text-xl md:text-2xl xl:text-4xl font-black text-center ">
+        <h1 className=" text-[#5fcbd3] sm:text-xl md:text-2xl xl:text-4xl font-black text-center ">
           My Skills
         </h1>
         <div className="flex flex-wrap items-stretch gap-y-16 gap-x-8 sm:gap-x-14 md:gap-x-6 xl:gap-x-10 justify-between mt-10">
@@ -40,5 +40,7 @@ const Skills = forwardRef(() => {
     </div>
   );
 });
+
+Skills.displayName = "Skills";
 
 export default Skills;
