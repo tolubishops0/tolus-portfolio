@@ -40,11 +40,11 @@ const Nav = forwardRef((props, reff) => {
   return (
     <main
       style={{
-        boxShadow: "0 0 10px 0 #5fcbd3",
+        boxShadow: "0 0 30px 0 #5fcbd3",
       }}>
       <div className="w-[80%] mx-auto h-32 flex justify-between items-center">
         <div className="z-50">
-          <p className=" font-black font-[briem-hand] text-2xl md:text-4xl italic">
+          <p className="text-[#5fcbd3] font-black font-[briem-hand] text-2xl md:text-4xl italic">
             Tolulope
           </p>
         </div>

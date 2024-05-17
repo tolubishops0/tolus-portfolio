@@ -42,7 +42,6 @@ body {
 }
 .flip-card {
   perspective: 1000px;
-
 }
 .flip-card-inner {
   transition: transform 0.6s;
@@ -53,11 +52,16 @@ body {
 .flip-card-back {
   position: absolute;
   backface-visibility: hidden;
+  border: 2px thin #5fcbd3;
+  box-shadow: 0 0 6px 0 #5fcbd3;
+  border-radius: 5px;
+
+  /* background-color: rgb(87, 38, 38); */
 }
 .flip-card-back {
   transform: rotateY(180deg);
-  /* background-image: url('/public/noise.svg'); */
-  background-color: rgba(34, 31, 31, 0.5);
-  /* height: 100%; */
+  box-shadow: 0 0 6px 0 #5fcbd3;
+  border: 2px thin #5fcbd3;
+  border-radius: 5px;
   width: 100%;
 }

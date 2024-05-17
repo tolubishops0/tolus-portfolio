@@ -8,7 +8,7 @@ import { FaArrowRight } from "react-icons/fa6";
 
 const Projects = () => {
   const { resolvedTheme } = useTheme();
-  const [isFlippedIndex, setIsFlippedIndex] = useState<number>(-1);
+  const [isFlippedIndex, setIsFlippedIndex] = useState<number>(0);
   const [isAnimated, setIsAnimated] = useState<Boolean>(false);
   const textColor = resolvedTheme === "dark" ? "darkTheme" : "lightTheme";
   const ref = useRef<HTMLDivElement>(null);
@@ -34,8 +34,9 @@ const Projects = () => {
       <motion.div
         style={{ scale: scaleProgress, opacity: opacityProgress }}
         ref={ref}>
-        <div className={`w-full mx-auto text-${textColor} py-8`}>
-          <h1 className="text:lg sm:text-xl md:text-2xl xl:text-4xl font-black text-center">
+        <div
+          className={`w-full mx-auto text-${textColor} py-[3rem] pb-[2rem] xl:pt-[4rem] xl:pb-[4rem]`}>
+          <h1 className="  sm:text-xl md:text-2xl xl:text-4xl font-black text-center">
             Projects
           </h1>
           <div className="flex flex-col md:flex-row md:flex-wrap items-center justify-between gap-x-5 md:gap-x-2 gap-y-6 w-full h-full mx-auto mt-10">
@@ -52,7 +53,11 @@ const Projects = () => {
                   transition={{ duration: 0.6, animationDirection: "normal" }}
                   onAnimationComplete={() => setIsAnimated(false)}
                   className="flip-card-inner h-full">
-                  <div className="flip-card-front w-full h-full ">
+                  <div
+                    style={{
+                      boxShadow: "0 0 5px 0 #5fcbd3",
+                    }}
+                    className="flip-card-front w-full h-full">
                     <Image
                       alt=""
                       src={item.img}
@@ -61,26 +66,26 @@ const Projects = () => {
                   </div>
                   <div className="flip-card-back w-full h-full flex items-center">
                     <div className="text-sm flex flex-col mx-auto w-[90%] gap-y-2 lg:gap-y-4">
-                      <p className="font-semibold text-sm text-center uppercase">
+                      <p className="text-[#5fcbd3] font-semibold text-sm text-center uppercase">
                         {item.label}
                       </p>
                       <p className="text-sm">{item.text}</p>
-                      <div className="flex items-center justify-between w-full">
+                      <div className="text-[#5fcbd3] flex items-center justify-between w-full">
                         <button
                           onClick={() => handleLinks(item.github)}
                           className="flex items-center py-1 text-sm">
-                          github{" "}
+                          Go to github{" "}
                           <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-                            --&gt;
+                            -&gt;
                           </span>
                         </button>
                         <button
                           onClick={() => handleLinks(item.link)}
                           className="flex items-end py-1  text-sm">
-                          live{" "}
+                          View live{" "}
                           <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
                             {" "}
-                            --&gt;
+                            -&gt;
                           </span>
                         </button>
                       </div>
