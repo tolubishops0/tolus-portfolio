@@ -1,16 +1,13 @@
 "use client";
 import React, { useRef } from "react";
 import { useTheme } from "next-themes";
-import { socialIcons } from "../../util";
-import Image from "next/image";
 import { BsGithub, BsLinkedin, BsTwitterX } from "react-icons/bs";
 import ThemeSwitch from "../ThemToggle";
-import { useScroll, motion, Variants, useTransform } from "framer-motion";
+import { useScroll, useTransform } from "framer-motion";
 import { ImMail3 } from "react-icons/im";
 
 const SubHero: React.FC = () => {
   const { resolvedTheme } = useTheme();
-  const textColor = resolvedTheme === "dark" ? "darkTheme" : "lightTheme";
 
   const socialIcons = [
     {
@@ -62,7 +59,13 @@ const SubHero: React.FC = () => {
             fuga rerum eum laborum corporis dolores quo vitae aspernatur
             molestias tempora fugiat architecto voluptates ducimus assumenda.
           </p>
-          <button className="mt-2 flex items-end py-1 font-bold text-base text-[#5fcbd3]">
+          <button
+            onClick={(e) =>
+              getSocialLinks(
+                "https://drive.google.com/file/d/1P1BcKNYJ1vT70LuKWF551izRfGOABQLX/view?usp=drivesdk"
+              )
+            }
+            className="mt-2 flex items-end py-1 font-bold text-base text-[#5fcbd3]">
             View Resume
             <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
               {" "}
