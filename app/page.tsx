@@ -110,9 +110,9 @@ const Home = () => {
         />
         <div className="">
           <Nav ref={navRef} />
-          <div className="w-[80%] mx-auto">
-            <Hero />
-            <div id="skills">
+          <div className="w-[80%] mx-auto ">
+              <Hero />
+            <div className="" id="skills">
               <Skills />
             </div>
             <div id="projects">

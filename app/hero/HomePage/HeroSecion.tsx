@@ -44,7 +44,7 @@ const SubHero: React.FC = () => {
   const opacityProgress = useTransform(scrollYProgress, [0, 1], [0.7, 1]);
 
   return (
-    <div className="relative w-full py-[5rem] pb-[2rem] xl:pt-[8rem] xl:pb-[4rem] flex flex-col-reverse lg:flex-row items-center justify-center lg:gap-x-8 gap-y-8">
+    <div className="relative w-full pt-[5rem] pb-[2rem] lg:pt-[9rem] lg:pb-[5rem] flex flex-col-reverse lg:flex-row items-center justify-center lg:gap-x-8 gap-y-8">
       <ThemeSwitch />
       <div className={`w-full pb-4 lg:pb-0 flex flex-col gap-y-4 xl:gap-y-6`}>
         <h1 className=" text:lg sm:text-xl md:text-2xl xl:text-4xl font-black ">
@@ -54,10 +54,14 @@ const SubHero: React.FC = () => {
           Frontend Developer
         </h1>
         <div>
-          <p className="text-base md:text-xl xl:text-xl">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore,
-            fuga rerum eum laborum corporis dolores quo vitae aspernatur
-            molestias tempora fugiat architecto voluptates ducimus assumenda.
+          <p className="text-base md:text-base ">
+            Hi, I am a software developer currently specializing in building and
+            managing dynamic, creative websites and web applications. I focus on
+            developing intuitive user experiences that evolve and improve based
+            on user metrics. While my current focus is on web development, I am
+            also interested in expanding into mobile app development. I am
+            constantly building and experimenting with new projects to enhance
+            my skills and push the boundaries of development.
           </p>
           <button
             onClick={(e) =>
@@ -76,7 +80,7 @@ const SubHero: React.FC = () => {
         <div className="flex gap-x-4">
           {socialIcons.map((item, index) => (
             <span
-              className=" cursor-pointer"
+              className=" cursor-pointer text-sm hover:scale-110 transition-transform duration-200"
               key={index}
               onClick={(e) => getSocialLinks(item.link)}>
               {item.icon}

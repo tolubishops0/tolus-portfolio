@@ -10,33 +10,34 @@ const Footer = () => {
     window.open(link, "_blank");
   };
   return (
-    <div className="bg-black text-white pt-12 pb-6 flex flex-col gap-y-8 ">
-      <div className="flex flex-col gap-y-8 items-center justify-center w-[80%] mx-auto ">
+    <div className="bg-black text-white py-12 flex flex-col gap-y-8 ">
+      <div className="flex flex-col gap-y-8 items-center justify-left w-[80%]  mx-auto ">
+        <div className="flex flex-col gap-y-4  ">
+          <h1 className="text-[#5fcbd3] text-sm md:text-base font-black ">
+            Tolulope Okunjoyo
+          </h1>
+          <p className="text-xs md:text-sm xl:w-[50%]">
+            Hi, I am a software developer currently specializing in building and
+            managing dynamic, creative websites and web applications. I focus on
+            developing intuitive user experiences that evolve and improve based
+            on user metrics.
+          </p>
+        </div>
         <div className="flex justify-left items-start w-full gap-x-6 mx-auto ">
           {socialIcons.map((item, index) => (
             <span
-              className=" cursor-pointer"
+              className=" cursor-pointer text-xs hover:scale-110 transition-transform duration-200"
               key={index}
               onClick={() => getSocialLinks(item.link)}>
               {item.icon}
             </span>
           ))}
         </div>
-        <div className="flex flex-col gap-y-4 ">
-          <h1 className="text-[#5fcbd3] sm:text-xl md:text-2xl xl:text-4xl font-black ">
-            Tolulope Okunjoyo
-          </h1>
-          <p className="text-xs  md:text-lg xl:text-xl">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore,
-            fuga rerum eum laborum corporis dolores quo vitae aspernatur
-            molestias tempora fugiat architecto voluptates ducimus assumenda.
-          </p>
-        </div>
       </div>
       <hr className="border-t-1 border-[#5fcbd3] w-[100%]" />
-      <div className="text-center text-xs lg:text-sm flex justify-between items-center w-[80%] mx-auto">
-        <p className="italic mb-1">{`@${date} Tolulope Okunjoyo`}</p>
-        <span> All rights reserved</span>
+      <div className="text-center text-xs lg:text-sm flex flex-col [80%] mx-auto">
+        <p className="italic mb-1">{`\u00A9 copyright ${date}. All rights reserved. `}</p>
+        <span>Made by Tolulope Okunjoyo</span>
       </div>
     </div>
   );
