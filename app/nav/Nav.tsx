@@ -26,7 +26,8 @@ const Nav = forwardRef((props, reff) => {
 
   const handleTabClick = (
     e: React.MouseEvent<HTMLParagraphElement>,
-    tab: string
+    tab: string,
+    label: string
   ) => {
     e.preventDefault();
     setShowMenu(false);
@@ -35,12 +36,15 @@ const Nav = forwardRef((props, reff) => {
     if (section) {
       section?.scrollIntoView({ behavior: "smooth" });
     }
+    if (label === "Resume") {
+      window.open(tab, "_blank");
+    }
   };
 
   return (
     <main
       style={{
-        boxShadow: "0 0 30px 0 #5fcbd3",
+        boxShadow: "0 0 20px 0 #5fcbd3",
       }}>
       <div className="w-[80%] mx-auto h-32 flex justify-between items-center">
         <div className="z-50">
@@ -72,33 +76,20 @@ const Nav = forwardRef((props, reff) => {
                         return (
                           <motion.p
                             {...framerText(index)}
-                            onClick={(e) => handleTabClick(e, item.link)}
+                            onClick={(e) =>
+                              handleTabClick(e, item.link, item.label)
+                            }
                             className=" py-1 w-full text-medium font-semibold cursor-pointer "
                             key={index}>
-                            {item.link === "about-me" || item.link === "/" ? (
-                              <Link
-                                className={`
+                            <a
+                              className={`
           ${
             activeTab === item.link
               ? `transition duration-1000 mb-1 border-b-2 border-[#5fcbd3]`
               : ""
-          }`}
-                                href={`/${item.link}`}>
-                                {item.label}
-                              </Link>
-                            ) : (
-                              <a
-                                className={`
-          ${
-            activeTab === item.link
-              ? `transition duration-1000 mb-1 border-b-2 border-[#5fcbd3]`
-              : ""
-          }`}
-                                // href={item.link}
-                              >
-                                {item.label}
-                              </a>
-                            )}
+          }`}>
+                              {item.label}
+                            </a>
                           </motion.p>
                         );
                       })}
@@ -112,33 +103,18 @@ const Nav = forwardRef((props, reff) => {
         <div className="hidden lg:flex gap-x-8 items-center justify-center">
           {navContent.map((item, index) => (
             <p
-              onClick={(e) => handleTabClick(e, item.link)}
+              onClick={(e) => handleTabClick(e, item.link, item.label)}
               className="text-gray text-base font-semibold cursor-pointer "
               key={index}>
-              {item.link === "about-me" || item.link === "/" ? (
-                <Link
-                  className={`
+              <a
+                className={`
           ${
             activeTab === item.link
               ? `transition duration-1000 mb-1 border-b-2 border-[#5fcbd3]`
               : ""
-          }`}
-                  href={`/${item.link}`}>
-                  {item.label}
-                </Link>
-              ) : (
-                <a
-                  className={`
-          ${
-            activeTab === item.link
-              ? `transition duration-1000 mb-1 border-b-2 border-[#5fcbd3]`
-              : ""
-          }`}
-                  // href={item.link}
-                >
-                  {item.label}
-                </a>
-              )}
+          }`}>
+                {item.label}
+              </a>
             </p>
           ))}
         </div>

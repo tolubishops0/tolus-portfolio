@@ -8,7 +8,7 @@ import { FaArrowRight } from "react-icons/fa6";
 
 const Projects = () => {
   const { resolvedTheme } = useTheme();
-  const [isFlippedIndex, setIsFlippedIndex] = useState<number>(0);
+  const [isFlippedIndex, setIsFlippedIndex] = useState<number>(-1);
   const [isAnimated, setIsAnimated] = useState<Boolean>(false);
   const textColor = resolvedTheme === "dark" ? "darkTheme" : "lightTheme";
   const ref = useRef<HTMLDivElement>(null);
@@ -66,7 +66,7 @@ const Projects = () => {
                   </div>
                   <div className="flip-card-back w-full h-full flex items-center">
                     <div className="text-sm flex flex-col mx-auto w-[90%] gap-y-2 lg:gap-y-4">
-                      <p className="text-[#5fcbd3] font-semibold text-sm text-center uppercase">
+                      <p className="text-[#5fcbd3] italic font-semibold text-sm text-center uppercase">
                         {item.label}
                       </p>
                       <p className="text-sm">{item.text}</p>
