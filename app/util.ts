@@ -164,7 +164,7 @@ export const tools = [
 export const project = [
   {
     img: anike,
-    label: "anikesalubata",
+    label: "Àníkẹ́ Sálúbàtà",
     text: "An e-commerce web application for selling handmade shoes. Built for my personal business using React, Tailwind CSS, MUI, Context API, Firebase and Local Storage.",
     github: "https://github.com/tolubishops0/anikesalubata",
     link: "https://harmonious-kheer-4c1df8.netlify.app/",
