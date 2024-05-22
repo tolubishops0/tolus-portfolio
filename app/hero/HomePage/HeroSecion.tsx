@@ -66,7 +66,7 @@ const SubHero: React.FC = () => {
           <button
             onClick={(e) =>
               getSocialLinks(
-                "https://drive.google.com/file/d/1P1BcKNYJ1vT70LuKWF551izRfGOABQLX/view?usp=drivesdk"
+                "https://drive.google.com/file/d/1KETfMSnYamWGrXg6ZYF2-VkBdji4LsPv/view?usp=drive_link"
               )
             }
             className="mt-2 flex items-end py-1 font-bold text-base text-[#5fcbd3] hover:scale-105 transition-transform duration-200">
