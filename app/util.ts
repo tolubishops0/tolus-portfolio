@@ -72,7 +72,7 @@ export const navContent: NavContentType[] = [
   // },
   {
     label: "Resume",
-    link: "https://drive.google.com/file/d/1P1BcKNYJ1vT70LuKWF551izRfGOABQLX/view?usp=drivesdk",
+    link: "https://drive.google.com/file/d/1KETfMSnYamWGrXg6ZYF2-VkBdji4LsPv/view?usp=drive_link",
   },
 ];
 
