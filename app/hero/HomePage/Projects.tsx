@@ -60,7 +60,7 @@ const Projects = () => {
                       style={{
                         width: "100%",
                         height: "100%",
-                        borderRadius: "5px",
+                        borderRadius: "8px",
                       }}
                     />
                   </div>
