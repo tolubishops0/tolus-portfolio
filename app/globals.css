@@ -4,35 +4,9 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  /* --text-color: var(--color-graylight); */
-  /* --foreground-rgb: 98, 223, 0; */
-  /* --background-rgb: linear-gradient(
-    121deg,
-    rgb(227, 227, 230),
-    rgba(82, 80, 80, 0.71)
-  ); */
-  /* --background-end-rgb: 255, 255, 255; */
-}
-
-/* .text-primary {
-  color: var(--text-color);
-} */
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    /* --foreground-rgb: 255, 255, 255; */
-    /* --background-rgb: linear-gradient(
-      280deg,
-      rgba(6, 6, 6, 1),
-      rgba(30, 29, 29, 0.71)
-    ); */
-  }
-}
 
 body {
-  /* color: rgb(var(--text-color)); */
-  /* background: var(--background-rgb); */
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 @layer utilities {
