@@ -53,17 +53,15 @@ const Projects = () => {
                   transition={{ duration: 0.6, animationDirection: "normal" }}
                   onAnimationComplete={() => setIsAnimated(false)}
                   className="flip-card-inner h-full">
-                  <div
-                    style={
-                      {
-                        // boxShadow: "0 0 5px 0 #5fcbd3",
-                      }
-                    }
-                    className="flip-card-front w-full h-full border-2 rounded">
+                  <div className="flip-card-front w-full h-full border-2 rounded">
                     <Image
                       alt=""
                       src={item.img}
-                      style={{ width: "100%", height: "100%" }}
+                      style={{
+                        width: "100%",
+                        height: "100%",
+                        borderRadius: "5px",
+                      }}
                     />
                   </div>
                   <div className="flip-card-back w-full h-full flex items-center ">
