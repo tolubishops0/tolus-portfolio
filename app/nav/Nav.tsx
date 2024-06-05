@@ -14,7 +14,6 @@ type Component = {
 };
 
 const Nav = forwardRef((props, reff) => {
-  const { resolvedTheme } = useTheme();
   const ref = useRef<HTMLDivElement>(null);
   const [showMenu, setShowMenu] = useState<Boolean>(false);
   const [activeTab, setActiveTab] = useState<String>("");
