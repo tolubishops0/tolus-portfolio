@@ -37,7 +37,7 @@ const Footer = () => {
       <hr className="border-t-1 border-[#5fcbd3] w-[100%]" />
       <div className="text-center text-xs lg:text-sm flex flex-col [80%] mx-auto">
         <p className="italic mb-1">{`\u00A9 copyright ${date}. All rights reserved. `}</p>
-        <span>Made by Tolulope Okunjoyo</span>
+        <span>Built with Next.js by Tolu</span>
       </div>
     </div>
   );
