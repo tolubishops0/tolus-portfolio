@@ -18,9 +18,7 @@ const Footer = () => {
           </h1>
           <p className="text-xs md:text-sm xl:w-[50%]">
             Hi, I am a software developer currently specializing in building and
-            managing dynamic, creative websites and web applications. I focus on
-            developing intuitive user experiences that evolve and improve based
-            on user metrics.
+            managing dynamic, creative websites and web applications.
           </p>
         </div>
         <div className="flex justify-left items-start w-full gap-x-6 mx-auto ">
