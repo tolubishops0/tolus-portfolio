@@ -23,6 +23,8 @@ import scissor from "../public/scis.png";
 import spotify from "../public/spotufy.png";
 import game from "../public/game.png";
 import ticket from "../public/ticket.png";
+import lendsqr from "../public/lendsqr.jpg";
+import coa from "../public/coa.jpg";
 
 type NavContentType = {
   label: string;
@@ -162,6 +164,20 @@ export const tools = [
 ];
 
 export const project = [
+  {
+    img: coa,
+    label: "Tech Care",
+    text: "A platform displaying users' heart history data using charts. Built with React, Tailwind CSS, and Chart libraries.",
+    github: "https://github.com/tolubishops0/coa-trend",
+    link: "https://coa-trend.netlify.app/",
+  },
+  {
+    img: lendsqr,
+    label: "LendSqr",
+    text: "A user management dashboard with search and authentication. Built with TypeScript, Next.js, SCSS, and Local storage",
+    github: "https://github.com/tolubishops0/lendsqr",
+    link: "https://tolu-okunjoyo-lendsqr-fe-test.netlify.app/",
+  },
   {
     img: anike,
     label: "Àníkẹ́ Sálúbàtà",
