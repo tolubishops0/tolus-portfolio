@@ -56,10 +56,6 @@ export const socialIcons: SocialIcons[] = [
 ];
 
 export const navContent: NavContentType[] = [
-  // {
-  //   label: "Home",
-  //   link: "/",
-  // },
   {
     label: "Skills",
     link: "skills",
@@ -68,13 +64,9 @@ export const navContent: NavContentType[] = [
     label: "Projects",
     link: "projects",
   },
-  // {
-  //   label: "About me",
-  //   link: "about-me",
-  // },
   {
     label: "Resume",
-    link: "https://drive.google.com/file/d/1nPb2914R_o534TC8_bRficvEukHY033M/view?usp=drivesdk",
+    link: "https://drive.google.com/file/d/1JhePFooL8i16UUuXCXSaerNsWgDiMifd/view?usp=drivesdk",
   },
 ];
 
