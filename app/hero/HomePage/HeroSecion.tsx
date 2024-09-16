@@ -66,7 +66,7 @@ const SubHero: React.FC = () => {
           <button
             onClick={(e) =>
               getSocialLinks(
-                "https://drive.google.com/file/d/1nPb2914R_o534TC8_bRficvEukHY033M/view?usp=drivesdk"
+                "https://github.com/tolubishops0/tolus-portfolio/blob/master/Tolu%20Okunjoyo-resume.pdf"
               )
             }
             className="mt-2 flex items-end py-1 font-bold text-base text-[#5fcbd3] hover:scale-105 transition-transform duration-200">
