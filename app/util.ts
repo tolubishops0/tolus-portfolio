@@ -66,7 +66,8 @@ export const navContent: NavContentType[] = [
   },
   {
     label: "Resume",
-    link: "https://drive.google.com/file/d/1JhePFooL8i16UUuXCXSaerNsWgDiMifd/view?usp=drivesdk",
+    //update at same resume
+    link: "https://github.com/tolubishops0/tolus-portfolio/blob/master/Tolu%20Okunjoyo-resume.pdf",
   },
 ];
 
