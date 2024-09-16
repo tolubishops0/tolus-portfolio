@@ -67,7 +67,7 @@ export const navContent: NavContentType[] = [
   {
     label: "Resume",
     //update at same resume
-    link: "https://drive.google.com/file/d/1k0zhy8TkAlNedSie21KcRlyJ9WZUsJ1O/view?usp=drivesdk",
+    link: "https://drive.google.com/file/d/1k0zhy8TkAlNedSie21KcRlyJ9WZUsJ1O/view?usp=sharing",
   },
 ];
 
