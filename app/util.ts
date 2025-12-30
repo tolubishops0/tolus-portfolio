@@ -170,7 +170,7 @@ export const project = [
     label: "LendSqr",
     text: "A user management dashboard with search and authentication. Built with TypeScript, Next.js, SCSS, and Local storage",
     github: "https://github.com/tolubishops0/lendsqr",
-    link: "https://tolu-okunjoyo-lendsqr-fe-test.netlify.app/",
+    link: "https://user-list-lender.netlify.app/",
   },
   {
     img: anike,

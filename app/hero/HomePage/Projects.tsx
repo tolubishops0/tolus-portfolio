@@ -3,8 +3,7 @@ import React, { useRef, useState } from "react";
 import { useTheme } from "next-themes";
 import Image from "next/image";
 import { project } from "../../util";
-import { useScroll, motion, Variants, useTransform } from "framer-motion";
-import { FaArrowRight } from "react-icons/fa6";
+import { useScroll, motion, useTransform } from "framer-motion";
 
 const Projects = () => {
   const { resolvedTheme } = useTheme();
@@ -102,13 +101,3 @@ const Projects = () => {
 };
 
 export default Projects;
-
-const framerText = (delay: number) => {
-  return {
-    initial: { opacity: 0, x: -50 },
-    animate: { opacity: 1, x: 0 },
-    transition: {
-      delay: 0.5 + delay / 10,
-    },
-  };
-};
