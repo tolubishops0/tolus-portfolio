@@ -16,7 +16,7 @@ import react from "../public/react.png";
 import github from "../public/GitHub.png";
 // import github from "../public/Material UI.png";
 
-import spacex from "../public/spacex.png";
+// import spacex from "../public/spacex.png";
 import anike from "../public/anike.png";
 import mhubs from "../public/mhub.png";
 import scissor from "../public/scis.png";
