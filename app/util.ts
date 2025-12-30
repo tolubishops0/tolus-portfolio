@@ -51,7 +51,7 @@ export const socialIcons: SocialIcons[] = [
   {
     label: "linkedin",
     icon: linkedin,
-    link: "https://www.linkedin.com/in/tolujoyo/",
+    link: "https://www.linkedin.com/in/tjoyo/",
   },
 ];
 
@@ -186,13 +186,13 @@ export const project = [
     github: "https://github.com/tolubishops0/mock-spotify",
     link: "https://sunny-spotify.netlify.app/",
   },
-  {
-    img: mhubs,
-    label: "Movie Hubbs",
-    text: "A movie listing app where users can browse a collection of movies, search for specific movies, and watch trailers. Built with React and Tailwind CSS",
-    github: "https://github.com/tolubishops0/moviebase",
-    link: "https://moviehubb-will.netlify.app/",
-  },
+  // {
+  //   img: mhubs,
+  //   label: "Movie Hubbs",
+  //   text: "A movie listing app where users can browse a collection of movies, search for specific movies, and watch trailers. Built with React and Tailwind CSS",
+  //   github: "https://github.com/tolubishops0/moviebase",
+  //   link: "https://moviehubb-will.netlify.app/",
+  // },
   {
     img: scissor,
     label: "scissors",
