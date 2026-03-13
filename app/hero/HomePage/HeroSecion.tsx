@@ -5,7 +5,7 @@ import { BsGithub, BsLinkedin, BsTwitterX } from "react-icons/bs";
 import ThemeSwitch from "../ThemToggle";
 import { useScroll, useTransform } from "framer-motion";
 import { ImMail3 } from "react-icons/im";
-
+import { BsArrowRight } from "react-icons/bs";
 const SubHero: React.FC = () => {
   const { resolvedTheme } = useTheme();
 
@@ -26,9 +26,9 @@ const SubHero: React.FC = () => {
       link: "https://www.linkedin.com/in/tolujoyo/",
     },
     {
-      label: "linkedin",
+      label: "mail",
       icon: <ImMail3 size={"1.5em"} />,
-      link: "https://www.linkedin.com/in/tolujoyo/",
+      link: "mailto:toluokunjoyo@gmail.com",
     },
   ];
 
@@ -54,27 +54,20 @@ const SubHero: React.FC = () => {
           Frontend Developer
         </h1>
         <div>
-          <p className="text-base md:text-base ">
-            Hi, I am a software developer currently specializing in building and
-            managing dynamic, creative websites and web applications. I focus on
-            developing intuitive user experiences that evolve and improve based
-            on user metrics. While my current focus is on web development, I am
-            also interested in expanding into mobile app development. I am
-            constantly building and experimenting with new projects to enhance
-            my skills and push the boundaries of development.
+
+<p className="text-base leading-relaxed text-slate-700 dark:text-slate-300">
+              Hi, I’m a Software Engineer specializing in building dynamic, high-performance web and mobile applications. My focus is on creating intuitive user experiences that evolve through data-driven metrics. Currently, I’m bridging the gap between platforms by leveraging React and React Native to build seamless interfaces across the web and mobile ecosystems. I’m a constant experimenter, always pushing the boundaries of what’s possible through code.
           </p>
           <button
             onClick={(e) =>
               getSocialLinks(
-                "https://github.com/tolubishops0/tolus-portfolio/blob/master/Tolu%20Okunjoyo-resume.pdf"
+                "https://drive.google.com/file/d/1MAvAtgMWZ-JEKqpwSpA6TyVx61QBKGNX/edit"
               )
             }
-            className="mt-2 flex items-end py-1 font-bold text-base text-[#5fcbd3] hover:scale-105 transition-transform duration-200">
+            className="mt-2 flex items-center py-1 font-bold text-base text-[#5fcbd3] gap-x-1 hover:scale-105 transition-transform duration-200">
             View Resume
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              {" "}
-              --&gt;
-            </span>
+           <BsArrowRight/>
+          
           </button>
         </div>
         <div className="flex gap-x-4">

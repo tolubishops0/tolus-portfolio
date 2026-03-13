@@ -14,6 +14,7 @@ import tail from "../public/Tailwind CSS.png";
 import next from "../public/Next.js.png";
 import react from "../public/react.png";
 import github from "../public/GitHub.png";
+
 // import github from "../public/Material UI.png";
 
 // import spacex from "../public/spacex.png";
@@ -25,6 +26,8 @@ import game from "../public/game.png";
 import ticket from "../public/ticket.png";
 import lendsqr from "../public/lendsqr.jpg";
 import coa from "../public/coa.jpg";
+import farmfold from '../public/farmfold.png'
+import is from '../public/isschola.png'
 
 type NavContentType = {
   label: string;
@@ -156,8 +159,21 @@ export const tools = [
     icon: github,
   },
 ];
-
 export const project = [
+  {
+    img: farmfold,
+    label: "FarmFold",
+    text: "A responsive agri-marketplace featuring reusable product components, advanced category filtering, and skeleton loaders for an optimized async user experience. Built with React and Tailwind CSS.",
+    github: "https://github.com/tolubishops0/farmfold", // Double check this link
+    link: "https://farmfold.netlify.app/", // Double check this link
+  },
+  {
+    img: is, 
+    label: "Intelligent Scholar",
+    text: "A high-conversion marketing landing page designed with a focus on information hierarchy and accessibility. Built with React and Tailwind CSS.",
+    github: "https://github.com/tolubishops0/isslp",
+    link: "https://isslp.netlify.app/",
+  },
   {
     img: coa,
     label: "Tech Care",
@@ -168,13 +184,13 @@ export const project = [
   {
     img: lendsqr,
     label: "LendSqr",
-    text: "A user management dashboard with search and authentication. Built with TypeScript, Next.js, SCSS, and Local storage",
+    text: "A user management dashboard with search and authentication. Built with TypeScript, Next.js, SCSS, and Local storage.",
     github: "https://github.com/tolubishops0/lendsqr",
     link: "https://user-list-lender.netlify.app/",
   },
   {
     img: anike,
-    label: "Àníkẹ́ Sálúbàtà",
+    label: "Àníkẹ́ Sálúbàtà",
     text: "An e-commerce web application for selling handmade shoes. Built for my personal business using React, Tailwind CSS, MUI, Context API, Firebase and Local Storage.",
     github: "https://github.com/tolubishops0/anikesalubata",
     link: "https://harmonious-kheer-4c1df8.netlify.app/",
@@ -186,13 +202,6 @@ export const project = [
     github: "https://github.com/tolubishops0/mock-spotify",
     link: "https://sunny-spotify.netlify.app/",
   },
-  // {
-  //   img: mhubs,
-  //   label: "Movie Hubbs",
-  //   text: "A movie listing app where users can browse a collection of movies, search for specific movies, and watch trailers. Built with React and Tailwind CSS",
-  //   github: "https://github.com/tolubishops0/moviebase",
-  //   link: "https://moviehubb-will.netlify.app/",
-  // },
   {
     img: scissor,
     label: "scissors",
@@ -203,14 +212,14 @@ export const project = [
   {
     img: ticket,
     label: "OverView",
-    text: "A design-focused user interface for a ticketing project built with React, Material-UI, Tailwind CSS, and Recharts",
+    text: "A design-focused user interface for a ticketing project built with React, Material-UI, Tailwind CSS, and Recharts.",
     github: "https://github.com/tolubishops0/ajeoba",
     link: "https://courageous-twilight-3ba4d7.netlify.app/",
   },
   {
     img: game,
     label: "Guess the number",
-    text: "A simple and minimalist number guessing game built with JavaScript, HTML, and CSS",
+    text: "A simple and minimalist number guessing game built with JavaScript, HTML, and CSS.",
     github: "https://github.com/tolubishops0/Guess-The-Number",
     link: "https://tolubishops0.github.io/Guess-The-Number/",
   },
