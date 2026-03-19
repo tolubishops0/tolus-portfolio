@@ -23,7 +23,7 @@ const SubHero: React.FC = () => {
     {
       label: "linkedin",
       icon: <BsLinkedin size={"1.5em"} />,
-      link: "https://www.linkedin.com/in/tolujoyo/",
+      link: "https://www.linkedin.com/in/tjoyo/",
     },
     {
       label: "mail",
@@ -54,20 +54,25 @@ const SubHero: React.FC = () => {
           Frontend Developer
         </h1>
         <div>
-
-<p className="text-base leading-relaxed text-slate-700 dark:text-slate-300">
-              Hi, I’m a Software Engineer specializing in building dynamic, high-performance web and mobile applications. My focus is on creating intuitive user experiences that evolve through data-driven metrics. Currently, I’m bridging the gap between platforms by leveraging React and React Native to build seamless interfaces across the web and mobile ecosystems. I’m a constant experimenter, always pushing the boundaries of what’s possible through code.
+          <p className="text-base leading-relaxed text-slate-700 dark:text-slate-300">
+            Hi, I’m a Software Engineer specializing in building dynamic,
+            high-performance web and mobile applications. My focus is on
+            creating intuitive user experiences that evolve through data-driven
+            metrics. Currently, I’m bridging the gap between platforms by
+            leveraging React and React Native to build seamless interfaces
+            across the web and mobile ecosystems. I’m a constant experimenter,
+            always pushing the boundaries of what’s possible through code.
           </p>
           <button
             onClick={(e) =>
               getSocialLinks(
-                "https://drive.google.com/file/d/1MAvAtgMWZ-JEKqpwSpA6TyVx61QBKGNX/edit"
+                "https://drive.google.com/file/d/1MAvAtgMWZ-JEKqpwSpA6TyVx61QBKGNX/edit",
               )
             }
-            className="mt-2 flex items-center py-1 font-bold text-base text-[#5fcbd3] gap-x-1 hover:scale-105 transition-transform duration-200">
+            className="mt-2 flex items-center py-1 font-bold text-base text-[#5fcbd3] gap-x-1 hover:scale-105 transition-transform duration-200"
+          >
             View Resume
-           <BsArrowRight/>
-          
+            <BsArrowRight />
           </button>
         </div>
         <div className="flex gap-x-4">
@@ -75,7 +80,8 @@ const SubHero: React.FC = () => {
             <span
               className=" cursor-pointer text-sm hover:scale-110 transition-transform duration-200"
               key={index}
-              onClick={(e) => getSocialLinks(item.link)}>
+              onClick={(e) => getSocialLinks(item.link)}
+            >
               {item.icon}
             </span>
           ))}

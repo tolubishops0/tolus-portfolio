@@ -26,7 +26,8 @@ const Footer = () => {
             <span
               className=" cursor-pointer text-xs hover:scale-110 transition-transform duration-200"
               key={index}
-              onClick={() => getSocialLinks(item.link)}>
+              onClick={() => getSocialLinks(item.link)}
+            >
               {item.icon}
             </span>
           ))}
@@ -56,11 +57,11 @@ const socialIcons = [
   {
     label: "linkedin",
     icon: <BsLinkedin size={"1.5em"} />,
-    link: "https://www.linkedin.com/in/tolujoyo/",
+    link: "https://www.linkedin.com/in/tjoyo/",
   },
   {
-    label: "linkedin",
+    label: "mail",
     icon: <ImMail3 size={"1.5em"} />,
-    link: "https://www.linkedin.com/in/tolujoyo/",
+    link: "mailto:toluokunjoyo@gmail.com",
   },
 ];

@@ -26,8 +26,9 @@ import game from "../public/game.png";
 import ticket from "../public/ticket.png";
 import lendsqr from "../public/lendsqr.jpg";
 import coa from "../public/coa.jpg";
-import farmfold from '../public/farmfold.png'
-import is from '../public/isschola.png'
+import farmfold from "../public/farmfold.png";
+import is from "../public/isschola.png";
+import techpulse from "../public/techpulse.png";
 
 type NavContentType = {
   label: string;
@@ -167,8 +168,15 @@ export const project = [
     github: "https://github.com/tolubishops0/farmfold", // Double check this link
     link: "https://farmfold.netlify.app/", // Double check this link
   },
+{
+  img: techpulse,
+  label: "TechPulse",
+  text: "A full-stack tech news platform demonstrating all Next.js rendering strategies — SSG, ISR, SSR, PPR, and CSR — in a single production app. Features Supabase auth, real-time likes and comments, bookmarks, reading history, and a personalised dashboard.",
+  github: "https://github.com/tolubishops0/techpulse",
+  link: "https://techpulse-theta.vercel.app/",
+}
   {
-    img: is, 
+    img: is,
     label: "Intelligent Scholar",
     text: "A high-conversion marketing landing page designed with a focus on information hierarchy and accessibility. Built with React and Tailwind CSS.",
     github: "https://github.com/tolubishops0/isslp",
@@ -209,13 +217,13 @@ export const project = [
     github: "https://github.com/tolubishops0/scissors",
     link: "https://whimsical-baklava-230b00.netlify.app/",
   },
-  {
-    img: ticket,
-    label: "OverView",
-    text: "A design-focused user interface for a ticketing project built with React, Material-UI, Tailwind CSS, and Recharts.",
-    github: "https://github.com/tolubishops0/ajeoba",
-    link: "https://courageous-twilight-3ba4d7.netlify.app/",
-  },
+  // {
+  //   img: ticket,
+  //   label: "OverView",
+  //   text: "A design-focused user interface for a ticketing project built with React, Material-UI, Tailwind CSS, and Recharts.",
+  //   github: "https://github.com/tolubishops0/ajeoba",
+  //   link: "https://courageous-twilight-3ba4d7.netlify.app/",
+  // },
   {
     img: game,
     label: "Guess the number",
